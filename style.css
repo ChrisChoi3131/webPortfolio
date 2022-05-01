@@ -1,13 +1,14 @@
 :root {
   --color-white: #ffffff;
   --color-black: #000000;
-  --color-pink: #e8655f;
+  --color-pink: #fa5a59;
   --color-light-grey: #999999;
   --color-grey: #919395;
 
+  --font-extra-large: 60px;
   --font-large: 48px;
   --font-medium: 28px;
-  --font-regular: 18px;
+  --font-regular: 20px;
   --font-small: 16px;
   --font-semi-micro: 14px;
   --font-micro: 10px;
@@ -34,6 +35,14 @@ ul {
   list-style: none;
   padding-left: 0px;
 }
+button{
+  font-family: "Open Sans";
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
 h1 {
   font-size: var(--font-large);
   font-weight: var(--weight-bold);
@@ -41,7 +50,7 @@ h1 {
   margin: 16px 0px;
 }
 h2 {
-  font-size: var(--font-regular);
+  font-size: var(--font-medium);
   font-weight: var(var(--weight-semi-bold));
   color: var(--color-black);
   margin: 8px 0px;
@@ -83,7 +92,7 @@ p {
 .navbar__logo__name {
   display: flex;
   flex-direction: column;
-  font-size: var(--font-medium);
+  font-size: clamp(var(--font-semi-micro), 2vw, var(--font-medium));
   font-weight: var(--weight-bold);
 }
 .navbar__menu {
@@ -97,16 +106,15 @@ p {
 .navbar__menu__item.active {
   border: 1px solid black;
 }
-.navbar__menu__item > a{
+.navbar__menu__item > a {
   position: relative;
   font-size: medium;
   font-weight: var(--weight-semi-bold);
 }
-.navbar__menu__item > a:before{
+.navbar__menu__item > a:before {
   content: "";
   position: absolute;
   width: 0;
-  margin-top: 2px;
   height: 2px;
   bottom: 0;
   left: 0;
@@ -114,7 +122,37 @@ p {
   visibility: hidden;
   transition: all 0.3s ease-in-out;
 }
-.navbar__menu__item > a:hover:before{
+.navbar__menu__item > a:hover:before {
   visibility: visible;
   width: 100%;
 }
+
+#home{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin : 10% 20%
+
+}
+.home__title {
+  font-size: clamp(40px, 6vw, 80px);
+  font-weight: var(--weight-bold);
+  color: var(--color-pink);
+  margin: 16px 0px;
+}
+.home__description {
+  font-size: clamp(var(--font-semi-micro), 2vw, var(--font-regular));
+  font-weight: var(--weight-regular);
+  color: var(--color-grey);
+  margin: 8px 0px;
+}
+.home__contact {
+  color : var(--color-pink);
+  border-radius: var(--size--border-radius);
+  border : 2px solid var(--color-pink);
+  font-size : var(--font-semi-micro);
+  font-weight : var(--weight-semi-bold );
+  margin-top: 24px;
+  padding : 16px 30px;
+}
+
