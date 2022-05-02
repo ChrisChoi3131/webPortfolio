@@ -19,7 +19,7 @@
   --weight-regular: 400;
 
   --size-border-radius: 4px;
-  --aninamtion-duration: 0.5s;
+  --aninamtion-duration: 0.3s;
   --nav-height: 104px;
 }
 
@@ -70,6 +70,18 @@ p {
   color: var(--color-black);
   margin: 4px 0px;
 }
+#footerLeft{
+  left:0;
+  bottom: 0;
+  position: fixed;
+  padding: 16px;
+}
+#footerRight{
+  right:0;
+  bottom: 0;
+  position: fixed;
+  padding: 16px;
+}
 #navbar {
   position: fixed;
   background: #ffffff;
@@ -82,15 +94,11 @@ p {
   color: var(--color-black);
   padding: 16px;
   height: var(--nav-height);
-  
+  transition: transform var(--aninamtion-duration) ease-in-out;
 }
 #navbar.navbar__hide{
-  /* display: none; */
-  transition: transform 0.4s ease-in-out;
-  transform: translateY(calc(var(--nav-height) * -1));
-  /* height: var(--nav-scroll-height);
-  transform: translateY(calc(var(--nav-scroll-height) * -1)); */
-  /* box-shadow: 0 10px 30px -10px var(--navy-shadow); */
+  transition: transform var(--aninamtion-duration) ease-in-out;
+  transform: translateY(calc(var(--nav-height) * -1));  
 }
 .navbar__logo {
   display: flex;
@@ -138,7 +146,11 @@ p {
   left: 0;
   background-color: var(--color-pink);
   visibility: hidden;
-  transition: all 0.3s ease-in-out;
+  transition: all var(--aninamtion-duration) ease-in-out;
+}
+.navbar__menu__item > a:hover{
+  color: var(--color-pink);
+  transition: all var(--aninamtion-duration) ease-in-out;
 }
 .navbar__menu__item > a:hover:before {
   visibility: visible;
@@ -166,7 +178,6 @@ p {
   margin-top: 24px;
   padding : 16px 30px;
 }
-
 .section{
   display: flex;
   flex-direction: column;
