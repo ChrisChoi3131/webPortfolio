@@ -2,7 +2,6 @@
   --color-white: #ffffff;
   --color-black: #000000;
   --color-pink: #fa5a59;
-  /* --color-pink: #20FF80; */
   --color-light-grey: #999999;
   --color-grey: #919395;
 
@@ -71,16 +70,22 @@ p {
   margin: 4px 0px;
 }
 #footerLeft{
+  display: flex;
+  flex-direction: column;
   left:0;
   bottom: 0;
   position: fixed;
-  padding: 16px;
+  padding: 66px;
+  color: var(--color-pink);
 }
 #footerRight{
-  right:0;
-  bottom: 0;
+  right:0px;
+  bottom: 0px;
+  padding : 66px;
   position: fixed;
-  padding: 16px;
+  color: var(--color-pink);
+  font-weight: var(--weight-semi-bold); 
+  writing-mode : vertical-lr;
 }
 #navbar {
   position: fixed;
@@ -129,9 +134,7 @@ p {
   margin: 0 4px;
   cursor: pointer;
 }
-.navbar__menu__item.active {
-  border: 1px solid black;
-}
+
 .navbar__menu__item > a {
   position: relative;
   font-size: medium;
@@ -156,7 +159,9 @@ p {
   visibility: visible;
   width: 100%;
 }
-
+#home{
+  height: 100vh;
+}
 .home__title {
   font-size: clamp(40px, 6vw, 80px);
   font-weight: var(--weight-bold);
