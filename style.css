@@ -57,6 +57,21 @@ h2 {
   font-weight: var(var(--weight-semi-bold));
   color: var(--color-black);
 }
+h2.divider {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+h2.divider::after{
+  content: "";
+  flex-grow: 1;
+  margin-left: 10px;
+  width: 10%;
+  display: block;
+  position: relative;
+  height: var(--divider-height);
+  background-color: var(--color-pink);
+}
 h3 {
   font-size: var(--font-medium);
   font-weight: var(--weight-regular);
@@ -274,15 +289,21 @@ p {
 }
 .about__title {
   color: var(--color-pink);
-  width: 100%;
-  display: flex;
-  align-items: center;
+  width: 600px;
 }
-.about__title::after {
+.experience__title {
+  color: var(--color-pink);
+  width: 600px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.experience__title::after {
   content: "";
   display: block;
   position: relative;
-  width: 30%;
+  width: 50%;
   height: var(--divider-height);
   margin-left: 20px;
   background-color: var(--color-pink);
