@@ -65,7 +65,7 @@ h2.divider {
 h2.divider::after{
   content: "";
   flex-grow: 1;
-  margin-left: 10px;
+  margin-left: 20px;
   width: 10%;
   display: block;
   position: relative;
@@ -86,7 +86,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: 100px 20%;
+  margin: 200px 20%;
 }
 
 #footerLeft {
@@ -287,26 +287,22 @@ p {
   margin-top: 24px;
   padding: 16px 30px;
 }
+#about{
+  
+}
 .about__title {
   color: var(--color-pink);
-  width: 600px;
+  width: 60%;
+}
+.about__description{
+  width: 60%;
+}
+#experience{
+  padding-left: 5%;
 }
 .experience__title {
   color: var(--color-pink);
-  width: 600px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-}
-.experience__title::after {
-  content: "";
-  display: block;
-  position: relative;
-  width: 50%;
-  height: var(--divider-height);
-  margin-left: 20px;
-  background-color: var(--color-pink);
+  width: 60%;
 }
 
 #contact {
