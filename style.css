@@ -76,14 +76,22 @@ p {
   position: fixed;
   padding : 2vw;
   color: var(--color-pink);
-  font-size: clamp(var(--font-semi-micro),1vw, var(--font-regular));
-  /* height: 1%; */
+  
 }
 #footerLeft > * {
-  margin: 1px 0;
+  margin: 5px 0;
   cursor: pointer;
-  color: var(--color-pink);
+  color: var(--color-grey);
+  text-align: center;
+  font-size: clamp(var(--font-semi-micro),1vw, var(--font-regular));  
+  transition: all var(--aninamtion-duration) ease-in-out; 
 }
+#footerLeft > *:hover {
+  color : var(--color-pink);
+  transition: all var(--aninamtion-duration) ease-in-out;
+  transform: translateY(-3px);
+}
+
 #footerRight{
   right:0px;
   bottom: 0px;
@@ -131,7 +139,7 @@ p {
   font-size: clamp(var(--font-semi-micro), 2vw, var(--font-medium));
   font-weight: var(--weight-bold);
 }
-.navbar__logo__name::before{
+.navbar__logo__name:before{
   content: "_____";
   color: var(--color-pink);
 }
@@ -144,12 +152,10 @@ p {
   cursor: pointer;
 }
 
-.navbar__menu__item > a {
+.navbar__menu__item > a{
   position: relative;
   font-size: medium;
   font-weight: var(--weight-semi-bold);
-}
-.navbar__menu__item > a{
   background: linear-gradient(0deg, var(--color-pink), var(--color-pink)) no-repeat right bottom / 0 2px;
   transition: background-size 350ms;
 }
@@ -181,7 +187,7 @@ p {
   overflow:hidden;
   font-weight: var(--weight-semi-bold);
 }
-.home__title__rotate::before{
+.home__title__rotate:before{
   margin-right: 0.5em;
   content: "["; 
   animation-name: opacity;
@@ -189,7 +195,7 @@ p {
   animation-iteration-count: infinite;
   
 }
-.home__title__rotate::after{
+.home__title__rotate:after{
   margin-left: 0.5em;
   content: "]";
   right: 0;
