@@ -298,9 +298,23 @@ p {
   width: 60%;
 }
 #experience{
-  padding-left: 5%;
+  margin-left: 25%;
+  margin-right: 15%;
 }
 .experience__title {
+  color: var(--color-pink);
+  width: 60%;
+}
+
+.work__title {
+  color: var(--color-pink);
+  width: 60%;
+}
+#testimonials{
+  margin-left: 25%;
+  margin-right: 15%;
+}
+.testimonials__title {
   color: var(--color-pink);
   width: 60%;
 }
@@ -348,5 +362,13 @@ p {
   #home {
     padding-top: 50px;
     margin: 100px 10%;
+  }
+  #experience{
+    margin-left: 15%;
+    margin-right: 5%;
+  }
+  #testimonials{
+    margin-left: 15%;
+    margin-right: 5%;
   }
 }
