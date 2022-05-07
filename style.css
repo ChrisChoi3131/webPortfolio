@@ -67,6 +67,13 @@ p {
   font-weight: var(--weight-regular);
   color: var(--color-black);
 }
+.section{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 100px 20%;  
+}
+
 #footerLeft{
   display: flex;
   flex-direction: column;
@@ -167,7 +174,7 @@ p {
 #home{
   height: 100vh;
   margin-top: 0px;
-  padding-top: 200px;
+  padding-top: 300px;
   min-height: 800px;
 }
 .home__title {
@@ -178,10 +185,10 @@ p {
 }
 .home__title__rotate{
   font-size: clamp(40px, 6vw, 80px);
-  line-height: clamp(40px, 6vw, 80px);
+  line-height: clamp(55px, 7.5vw, 100px);
   display: flex;
   color: var(--color-light-grey);
-  height: clamp(45px, 6.5vw, 90px);
+  height: clamp(55px, 7.5vw, 100px);
   overflow:hidden;
   font-weight: var(--weight-semi-bold);
 }
@@ -213,6 +220,7 @@ p {
   padding-left: 0.5em;
   text-align: left;
   margin-top: 0;
+  top:0;
 }
 .home__list__item{
   animation-name: change;
@@ -244,18 +252,18 @@ p {
   margin-top: 24px;
   padding : 16px 30px;
 }
-.section{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin: 100px 10%;
+#contact{
+  background-color: var(--color-pink);
+  align-items: center;
+  margin: 0 0;
+  padding: 5% 20%;
 }
-
-@media screen and (min-width: 1280px) {
+@media screen and (max-width: 1280px) {
   .section{
-    margin: 100px 20%;
+    
   }
   #home{
-    padding-top: 400px;
+    padding-top: 50px;
+    margin: 100px 10%;
   }
 }
