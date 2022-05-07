@@ -7,8 +7,8 @@
 
   --font-extra-large: 60px;
   --font-large: clamp(40px, 6vw, 80px);
-  --font-medium: 28px;
-  --font-regular: 20px;
+  --font-medium: clamp(14px, 2vw, 28px);
+  --font-regular: clamp(14px, 2vw, 20px);
   --font-small: 16px;
   --font-semi-micro: 14px;
   --font-micro: 10px;
@@ -143,7 +143,7 @@ p {
 }
 .navbar__logo__name {
   display: flex;
-  font-size: clamp(var(--font-semi-micro), 2vw, var(--font-medium));
+  font-size: var(--font-medium);
   font-weight: var(--weight-bold);
 }
 .navbar__logo__name:before{
@@ -243,7 +243,7 @@ p {
   color: var(--color-grey);
   margin: 8px 0px;
 }
-.home__contact {
+.home__contactBtn {
   color : var(--color-pink);
   border-radius: var(--size-border-radius);
   border : 2px solid var(--color-pink);
@@ -255,12 +255,42 @@ p {
 #contact{
   background-color: var(--color-pink);
   align-items: center;
+  text-align: center;
   margin: 0 0;
-  padding: 5% 20%;
+  padding: 5% 20% 0 20%;
 }
+.contact__title{
+  font-size: var(--font-large);
+  font-weight: var(--weight-bold);
+  color: var(--color-white);
+  margin: 0px 0px;
+}
+.contact__description{
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+  color: var(--color-white);
+  margin: 16px 0px;
+}
+.contact__copyright{
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+  color: var(--color-white);
+  margin-top: 20%;
+}
+
+.contact__contactBtn {
+  color : var(--color-white);
+  border-radius: var(--size-border-radius);
+  border : 2px solid var(--color-white);
+  font-size : var(--font-semi-micro);
+  font-weight : var(--weight-semi-bold );
+  margin-top: 24px;
+  padding : 16px 30px;
+}
+
 @media screen and (max-width: 1280px) {
   .section{
-    
+    margin: 100px 10%;  
   }
   #home{
     padding-top: 50px;
