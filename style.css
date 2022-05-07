@@ -6,7 +6,7 @@
   --color-grey: #919395;
 
   --font-extra-large: 60px;
-  --font-large: 48px;
+  --font-large: clamp(40px, 6vw, 80px);
   --font-medium: 28px;
   --font-regular: 20px;
   --font-small: 16px;
@@ -80,7 +80,6 @@ p {
 }
 #footerLeft > * {
   margin: 5px 0;
-  cursor: pointer;
   color: var(--color-grey);
   text-align: center;
   font-size: clamp(var(--font-semi-micro),1vw, var(--font-regular));  
@@ -125,6 +124,7 @@ p {
 }
 .navbar__logo {
   min-width: 122px;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
 }
@@ -171,11 +171,10 @@ p {
   min-height: 800px;
 }
 .home__title {
-  font-size: clamp(40px, 6vw, 80px);
+  font-size: var(--font-large);
   font-weight: var(--weight-bold);
   color: var(--color-pink);
   margin: 0px 0px;
-  
 }
 .home__title__rotate{
   font-size: clamp(40px, 6vw, 80px);

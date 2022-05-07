@@ -2,6 +2,7 @@
 
 let lastScrollY = 0;
 const navbar = document.querySelector('#navbar');
+const navbarLogo = document.querySelector('.navbar__logo');
 const navbarMenu = document.querySelector('.navbar__menu');
 const heightNavbar = navbar.getBoundingClientRect().height;
 const sections = document.querySelectorAll('section');
@@ -21,13 +22,16 @@ document.addEventListener('scroll', (e) => {
   }
 });
 
+navbarLogo.addEventListener('click', ()=>{
+  const element = document.getElementById("home");
+  element.scrollIntoView({ behavior: "smooth", block: "start" });
+})
 navbarMenu.addEventListener('click', (e) => {
   let target = e.target;
   target.tagName !== 'LI' ? target = target.parentElement : null;
   if (!target.dataset.link) return;
   const element = document.getElementById(target.dataset.link);
   element.scrollIntoView({ behavior: "smooth", block: "start" });
-
 })
 
 
