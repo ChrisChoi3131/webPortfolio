@@ -149,24 +149,14 @@ p {
   font-size: medium;
   font-weight: var(--weight-semi-bold);
 }
-.navbar__menu__item > a:before {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: var(--color-pink);
-  visibility: hidden;
-  transition: all var(--aninamtion-duration) ease-in-out;
+.navbar__menu__item > a{
+  background: linear-gradient(0deg, var(--color-pink), var(--color-pink)) no-repeat right bottom / 0 2px;
+  transition: background-size 350ms;
 }
-.navbar__menu__item > a:hover{
+.navbar__menu__item > a:where(:hover, :focus-visible){
+  background-size: 100% 2px;
+  background-position-x: left;
   color: var(--color-pink);
-  transition: all var(--aninamtion-duration) ease-in-out;
-}
-.navbar__menu__item > a:hover:before {
-  visibility: visible;
-  width: 100%;
 }
 #home{
   height: 100vh;
