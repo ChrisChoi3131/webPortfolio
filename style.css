@@ -99,10 +99,12 @@ p {
   color: var(--color-black);
   padding: 16px;
   height: var(--nav-height);
-  transition: transform var(--aninamtion-duration) ease-in-out;
+  transition-delay: 0.5s;
+  transition: transform 0.5s ease-in-out;
 }
 #navbar.navbar__hide{
-  transition: transform var(--aninamtion-duration) ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition-delay: 0.5s;
   transform: translateY(calc(var(--nav-height) * -1));  
 }
 .navbar__logo {
@@ -161,6 +163,7 @@ p {
 }
 #home{
   height: 100vh;
+  padding: 100px 0px;
 }
 .home__title {
   font-size: clamp(40px, 6vw, 80px);
@@ -185,9 +188,10 @@ p {
 }
 .section{
   display: flex;
+  width: 100%;
   flex-direction: column;
   align-items: flex-start;
   margin: 10% 20%;
-  max-width: 1440px;
+  /* max-width: 1440px; */
 }
 
