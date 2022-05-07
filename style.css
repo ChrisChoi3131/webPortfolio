@@ -160,7 +160,9 @@ p {
 }
 #home{
   height: 100vh;
-  padding: 10% 0%;
+  /* padding: 20% 0%; */
+  margin-top: 0px;
+  padding-top: 200px;
   min-height: 800px;
 }
 .home__title {
@@ -242,8 +244,8 @@ p {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  /* padding: 5% 5%; */
-  margin: 100px 20%;
+  padding: 5% 5%;
+  margin: 100px 10%;
 }
 
 @media screen and (max-width: 768px) {
