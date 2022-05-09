@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 let lastScrollY = 0;
 let isFixedHeader = false;
@@ -9,10 +9,10 @@ const heightNavbar = navbar.getBoundingClientRect().height;
 const sections = document.querySelectorAll('section');
 const footerRight = document.querySelector('#footerRight');
 const switchFixHeader = document.querySelector('#switchFixHeader');
-let textFooterRight = "Home";
-footerRight.innerHTML = textFooterRight
-document.addEventListener('scroll', (e) => {
-  if(isFixedHeader===true) return;
+let textFooterRight = 'Home';
+footerRight.innerHTML = textFooterRight;
+document.addEventListener('scroll', () => {
+  if (isFixedHeader === true) return;
   if (lastScrollY < window.scrollY) {
     if (heightNavbar < window.scrollY) {
       navbar.classList.add('navbar__hide');
@@ -24,35 +24,34 @@ document.addEventListener('scroll', (e) => {
   }
 });
 
-switchFixHeader.addEventListener('click', (e) => {
+switchFixHeader.addEventListener('click', e => {
   if (e.target.tagName !== 'INPUT') return;
-  if(e.target.checked)isFixedHeader = true;
+  if (e.target.checked) isFixedHeader = true;
   else isFixedHeader = false;
 });
 navbarLogo.addEventListener('click', () => {
-  const element = document.getElementById("home");
-  element.scrollIntoView({ behavior: "smooth", block: "start" });
-})
-navbarMenu.addEventListener('click', (e) => {
+  const element = document.getElementById('home');
+  element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
+navbarMenu.addEventListener('click', e => {
   let target = e.target;
-  target.tagName !== 'LI' ? target = target.parentElement : null;
+  target.tagName !== 'LI' ? (target = target.parentElement) : null;
   if (!target.dataset.link) return;
   const element = document.getElementById(target.dataset.link);
-  element.scrollIntoView({ behavior: "smooth", block: "start" });
-})
+  element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
 
-
-const callbackObserver = (entries) => {
+const callbackObserver = entries => {
   entries.forEach(entry => {
     const text = entry.target.id.split('');
-    text[0] = text[0].toUpperCase()
+    text[0] = text[0].toUpperCase();
     if (entry.isIntersecting) {
       footerRight.innerHTML = text.join('');
     }
-  })
-}
+  });
+};
 const optionsObserver = {
-  threshold: 0.6
-}
+  threshold: 0.6,
+};
 const observer = new IntersectionObserver(callbackObserver, optionsObserver);
 sections.forEach(section => observer.observe(section));
