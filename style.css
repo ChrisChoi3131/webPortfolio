@@ -8,8 +8,8 @@
   --font-extra-large: clamp(40px, 6vw, 80px);
   --font-large: clamp(20px, 4vw, 40px);
   --font-medium: clamp(14px, 2vw, 28px);
-  --font-regular: clamp(10px, 2vw, 20px);
-  --font-small: 16px;
+  --font-regular: clamp(12px, 2vw, 20px);
+  --font-small: clamp(10px, 2vw, 16px);
   --font-semi-micro: 14px;
   --font-micro: 10px;
 
@@ -57,15 +57,30 @@ h2 {
   font-weight: var(var(--weight-semi-bold));
   color: var(--color-black);
 }
-h2.divider {
+h2.dividerRight {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-h2.divider::after{
+h2.dividerRight::after{
   content: "";
   flex-grow: 1;
   margin-left: 20px;
+  width: 10%;
+  display: block;
+  position: relative;
+  height: var(--divider-height);
+  background-color: var(--color-pink);
+}
+h2.dividerLeft {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+h2.dividerLeft::before{
+  content: "";
+  flex-grow: 1;
+  margin-right: 20px;
   width: 10%;
   display: block;
   position: relative;
@@ -177,14 +192,15 @@ p {
   position: relative;
   font-size: medium;
   font-weight: var(--weight-semi-bold);
-  background: linear-gradient(0deg, var(--color-pink), var(--color-pink)) no-repeat right bottom / 0 2px;
+  background: linear-gradient(0deg, var(--color-pink), var(--color-pink)) no-repeat center bottom / 0 2px;
   transition: background-size 350ms;
 }
 .navbar__menu__item > a:where(:hover, :focus-visible) {
   background-size: 100% 2px;
-  background-position-x: left;
+  background-position-x: center;
   color: var(--color-pink);
 }
+
 #home {
   height: 100vh;
   margin-top: 0px;
@@ -274,7 +290,7 @@ p {
 }
 .home__description {
   font-size: clamp(var(--font-semi-micro), 2vw, var(--font-regular));
-  font-weight: var(--weight-regular);
+  font-weight: var(--weight-semi-bold);
   color: var(--color-grey);
   margin: 8px 0px;
 }
@@ -298,14 +314,18 @@ p {
   width: 60%;
 }
 #experience{
-  margin-left: 25%;
-  margin-right: 15%;
+  align-items: flex-end;
+  /* margin-left: 15%;
+  margin-right: 15%; */
 }
 .experience__title {
   color: var(--color-pink);
   width: 60%;
 }
-
+.experience__description{
+  margin-left: 40%;
+  width: 60%;;
+}
 .work__title {
   color: var(--color-pink);
   width: 60%;
@@ -364,8 +384,8 @@ p {
     margin: 100px 10%;
   }
   #experience{
-    margin-left: 15%;
-    margin-right: 5%;
+    margin-left: 5%;
+    margin-right: 15%;
   }
   #testimonials{
     margin-left: 15%;
