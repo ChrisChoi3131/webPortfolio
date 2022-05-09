@@ -1,18 +1,20 @@
 'use strict'
 
 let lastScrollY = 0;
+let isFixedHeader = false;
 const navbar = document.querySelector('#navbar');
 const navbarLogo = document.querySelector('.navbar__logo');
 const navbarMenu = document.querySelector('.navbar__menu');
 const heightNavbar = navbar.getBoundingClientRect().height;
 const sections = document.querySelectorAll('section');
 const footerRight = document.querySelector('#footerRight');
+const switchFixHeader = document.querySelector('#switchFixHeader');
 let textFooterRight = "Home";
 footerRight.innerHTML = textFooterRight
 document.addEventListener('scroll', (e) => {
+  if(isFixedHeader===true) return;
   if (lastScrollY < window.scrollY) {
     if (heightNavbar < window.scrollY) {
-
       navbar.classList.add('navbar__hide');
       lastScrollY = window.scrollY;
     }
@@ -22,7 +24,12 @@ document.addEventListener('scroll', (e) => {
   }
 });
 
-navbarLogo.addEventListener('click', ()=>{
+switchFixHeader.addEventListener('click', (e) => {
+  if (e.target.tagName !== 'INPUT') return;
+  if(e.target.checked)isFixedHeader = true;
+  else isFixedHeader = false;
+});
+navbarLogo.addEventListener('click', () => {
   const element = document.getElementById("home");
   element.scrollIntoView({ behavior: "smooth", block: "start" });
 })
@@ -39,7 +46,7 @@ const callbackObserver = (entries) => {
   entries.forEach(entry => {
     const text = entry.target.id.split('');
     text[0] = text[0].toUpperCase()
-    if(entry.isIntersecting){
+    if (entry.isIntersecting) {
       footerRight.innerHTML = text.join('');
     }
   })
