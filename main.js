@@ -2,6 +2,7 @@
 
 let lastScrollY = 0;
 let isFixedHeader = false;
+let selectedNavIndex = 0;
 const navbar = document.querySelector('#navbar');
 const navbarLogo = document.querySelector('.navbar__logo');
 const navbarMenu = document.querySelector('.navbar__menu');
@@ -23,6 +24,12 @@ document.addEventListener('scroll', () => {
   }
 });
 document.addEventListener('scroll', () => {
+  // if (window.scrollY === 0) {
+  //   selectedNavIndex = 0;
+  // } else if (Math.round(window.scrollY + window.innerHeight) >= document.body.clientHeight) {
+  //   selectedNavIndex = sectionsId.length - 1;
+  // }
+  console.log(selectedNavIndex);
   if (window.innerHeight - sections[sections.length - 1].getBoundingClientRect().y > 30) {
     footerRight.style.color = 'white';
     for (const child of footerLeft.children) {
@@ -59,15 +66,20 @@ const navItems = new Map(
   ])
 );
 
+const mapEntries = new Map();
 const callbackObserver = entries => {
   if (entries.length > 1) {
     const currEntries = [];
     entries.forEach(entry => {
       const currentRatio = entry.intersectionRatio;
       const target = entry.target.id;
-      if (currentRatio > 0) currEntries.push({ target, currentRatio, idx: navItems.get(target).idx });
+      if (currentRatio > 0) {
+        currEntries.push({ target, currentRatio, idx: navItems.get(target).idx });
+        mapEntries.set(target, navItems.get(target).idx);
+      } else {
+        mapEntries.delete(target);
+      }
     });
-    console.log(currEntries);
     currEntries.sort((a, b) => {
       if (b.currentRatio > a.currentRatio) {
         return 1;
@@ -82,14 +94,35 @@ const callbackObserver = entries => {
       }
     });
     footerRight.innerText = currEntries[0].target;
+    selectedNavIndex = currEntries[0].idx;
   } else {
     const entry = entries[0];
-    const currentRatio = entry.intersectionRatio;
+    const isIntersecting = entry.isIntersecting;
+    const boundingClientRect = entry.boundingClientRect;
     const target = entry.target.id;
+    const idx = sectionsId.indexOf(target);
+    if (isIntersecting) {
+      mapEntries.set(target, idx);
+      const [sectionName, sectionIdx] = [...mapEntries].sort((a, b) => {
+        return b[1] - a[1];
+      })[0];
+      footerRight.innerText = sectionName;
+      selectedNavIndex = sectionIdx;
+    } else if (!isIntersecting) {
+      mapEntries.delete(target);
+      console.log(boundingClientRect.y);
+      if (boundingClientRect.y > 0) {
+        footerRight.innerText = idx !== 0 ? sectionsId[idx - 1] : sectionsId[idx];
+        selectedNavIndex = idx - 1;
+      }
+    }
+    if (isIntersecting && (target === sectionsId[0] || target === sectionsId[sectionsId.length - 1])) {
+      selectedNavIndex = idx;
+    }
   }
 };
 const optionsObserver = {
-  threshold: 1,
+  threshold: 0.8,
 };
 const observer = new IntersectionObserver(callbackObserver, optionsObserver);
 sections.forEach(section => observer.observe(section));
