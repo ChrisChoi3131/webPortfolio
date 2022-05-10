@@ -24,12 +24,6 @@ document.addEventListener('scroll', () => {
   }
 });
 document.addEventListener('scroll', () => {
-  // if (window.scrollY === 0) {
-  //   selectedNavIndex = 0;
-  // } else if (Math.round(window.scrollY + window.innerHeight) >= document.body.clientHeight) {
-  //   selectedNavIndex = sectionsId.length - 1;
-  // }
-  console.log(selectedNavIndex);
   if (window.innerHeight - sections[sections.length - 1].getBoundingClientRect().y > 30) {
     footerRight.style.color = 'white';
     for (const child of footerLeft.children) {
@@ -106,13 +100,14 @@ const callbackObserver = entries => {
       const [sectionName, sectionIdx] = [...mapEntries].sort((a, b) => {
         return b[1] - a[1];
       })[0];
+
       footerRight.innerText = sectionName;
       selectedNavIndex = sectionIdx;
     } else if (!isIntersecting) {
       mapEntries.delete(target);
-      console.log(boundingClientRect.y);
       if (boundingClientRect.y > 0) {
-        footerRight.innerText = idx !== 0 ? sectionsId[idx - 1] : sectionsId[idx];
+        const sectionName = idx !== 0 ? sectionsId[idx - 1] : sectionsId[idx];
+        footerRight.innerText = sectionName;
         selectedNavIndex = idx - 1;
       }
     }
