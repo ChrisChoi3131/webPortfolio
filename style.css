@@ -208,7 +208,7 @@ input:checked + .slider:before {
   bottom: 0;
   position: fixed;
   padding: 2vw;
-  color: var(--color-pink);
+  color: transparent;
 }
 
 #footerLeft > * {
@@ -294,6 +294,15 @@ input:checked + .slider:before {
   cursor: pointer;
 }
 
+.navbar__menu__item.active > a {
+  font-size: medium;
+  color: var(--color-pink);
+  font-weight: var(--weight-semi-bold);
+  background: linear-gradient(0deg, var(--color-pink), var(--color-pink)) no-repeat right bottom / 0 2px;
+  background-size: 100% 2px;
+  transition: background-size 350ms;
+  background-position-x: center;
+}
 .navbar__menu__item > a {
   position: relative;
   font-size: medium;
@@ -309,7 +318,7 @@ input:checked + .slider:before {
 }
 
 #home {
-  height: 100vh;
+  height: 80vh;
   margin-top: 0px;
   padding-top: 300px;
   min-height: 800px;
