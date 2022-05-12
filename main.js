@@ -50,7 +50,8 @@ navbarMenu.addEventListener('click', e => {
   target.tagName !== 'LI' ? (target = target.parentElement) : null;
   if (!target.dataset.link) return;
   const element = document.getElementById(target.dataset.link);
-  element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  const top = element.getBoundingClientRect().top - document.body.getBoundingClientRect().top - 100;
+  window.scrollTo({ top, behavior: 'smooth' });
 });
 const sectionsId = Array.from(sections).map(section => section.id);
 const navItems = new Map(
