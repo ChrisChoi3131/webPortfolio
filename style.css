@@ -32,6 +32,7 @@
 body {
   font-family: "Open Sans";
   margin: 0;
+  letter-spacing: -0.05em;
 }
 
 a {
@@ -240,6 +241,7 @@ input:checked + .slider:before {
   z-index: 1;
   position: fixed;
   background: #ffffff;
+  opacity: 90%;
   left: 0;
   top: 0;
   width: 100%;
@@ -307,13 +309,13 @@ input:checked + .slider:before {
   position: relative;
   font-size: medium;
   font-weight: var(--weight-semi-bold);
-  background: linear-gradient(0deg, var(--color-pink), var(--color-pink)) no-repeat center bottom / 0 2px;
+  background: linear-gradient(0deg, var(--color-pink), var(--color-pink)) no-repeat right bottom / 0 2px;
   transition: background-size 350ms;
 }
 
 .navbar__menu__item > a:where(:hover, :focus-visible) {
   background-size: 100% 2px;
-  background-position-x: center;
+  background-position-x: left;
   color: var(--color-pink);
 }
 
