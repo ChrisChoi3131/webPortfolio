@@ -1,8 +1,5 @@
 'use strict';
 
-let lastScrollY = 0;
-let isFixedHeader = false;
-let selectedNavIndex = 0;
 const navbar = document.querySelector('#navbar');
 const navbarLogo = document.querySelector('.navbar__logo');
 const navbarMenu = document.querySelector('.navbar__menu');
@@ -11,6 +8,9 @@ const sections = document.querySelectorAll('section');
 const footerRight = document.querySelector('#footerRight');
 const footerLeft = document.querySelector('#footerLeft');
 const switchFixHeader = document.querySelector('#switchFixHeader');
+let lastScrollY = 0;
+let isFixedHeader = true;
+let selectedNavIndex = 0;
 document.addEventListener('scroll', () => {
   if (isFixedHeader === true) return;
   if (lastScrollY < window.scrollY) {
@@ -50,7 +50,7 @@ navbarMenu.addEventListener('click', e => {
   target.tagName !== 'LI' ? (target = target.parentElement) : null;
   if (!target.dataset.link) return;
   const element = document.getElementById(target.dataset.link);
-  element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  element.scrollIntoView({ behavior: 'smooth', block: 'center' });
 });
 const sectionsId = Array.from(sections).map(section => section.id);
 const navItems = new Map(
