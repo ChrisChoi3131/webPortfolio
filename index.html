@@ -11,7 +11,7 @@
     <script src="https://kit.fontawesome.com/46f38d39c4.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
     <script src="main.js" defer></script>
     <link rel="stylesheet" href="./css/main.css" />
   </head>
@@ -24,28 +24,31 @@
     <div class="container">
       <nav id="navbar">
         <div class="navbar__logo">
-          <div class="navbar__logo__name">
+          <div class="navbar__logoName">
+            <div class="navbar__logoUnderbar"></div>
+            <div class="navbar__logoUnderbarActive"></div>
             <a>Yongrak Choi</a>
           </div>
           <a class="navbar__logo__developer">Web Developer</a>
         </div>
-        <div>
-          <ul class="navbar__menu">
-            <li class="navbar__menu__item" data-link="home"><a>Home</a></li>
-            <li class="navbar__menu__item" data-link="about"><a>About</a></li>
-            <li class="navbar__menu__item" data-link="experience"><a>Experience</a></li>
-            <li class="navbar__menu__item" data-link="work"><a>Work</a></li>
-            <li class="navbar__menu__item" data-link="testimonials"><a>Testimonials</a></li>
-            <li class="navbar__menu__item" data-link="contact"><a>Contact</a></li>
-            <div id="switchFixHeader" class="switch tooltip">
-              <label>
-                <input type="checkbox" role="switch" checked />
-                <div class="slider round"></div>
-              </label>
-              <span class="tooltiptext">Fix header</span>
-            </div>
-          </ul>
-        </div>
+        <button class="navbar_Hamburger">
+          <div class="navbar__HamburgerContents"></div>
+        </button>
+        <ul class="navbar__menu">
+          <li class="navbar__menu__item" data-link="home"><a>Home</a></li>
+          <li class="navbar__menu__item" data-link="about"><a>About</a></li>
+          <li class="navbar__menu__item" data-link="experience"><a>Experience</a></li>
+          <li class="navbar__menu__item" data-link="work"><a>Work</a></li>
+          <li class="navbar__menu__item" data-link="testimonials"><a>Testimonials</a></li>
+          <li class="navbar__menu__item" data-link="contact"><a>Contact</a></li>
+          <div id="switchFixHeader" class="switch tooltip">
+            <label>
+              <input type="checkbox" role="switch" checked />
+              <div class="slider round"></div>
+            </label>
+            <span class="tooltiptext">Fix header</span>
+          </div>
+        </ul>
       </nav>
       <footer id="footerLeft">
         <a href="https://github.com/ChrisChoi3131" target="_blank"><i class="fa-brands fa-github"></i></a>

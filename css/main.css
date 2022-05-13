@@ -34,7 +34,7 @@ body.before-load {
 }
 
 .switch {
-  margin-top: 12px;
+  margin-top: 10px;
   position: relative;
   width: 36px;
   height: 14px;
@@ -101,15 +101,15 @@ input:checked + .slider:before {
   left: 0;
   bottom: 0;
   position: fixed;
-  padding: 2vw;
+  padding: 1vw;
   color: transparent;
 }
 
 #footerLeft > * {
-  margin: 5px 0;
+  margin: 0.3vh 0;
   color: var(--color-grey);
   text-align: center;
-  font-size: clamp(var(--font-semi-micro), 1vw, var(--font-regular));
+  font-size: var(--font-small);
   transition: all var(--animation-duration) ease-in-out;
 }
 
@@ -122,11 +122,11 @@ input:checked + .slider:before {
 #footerRight {
   right: 0px;
   bottom: 0px;
-  padding: 2vw;
+  padding: 1vw;
   position: fixed;
   color: var(--color-pink);
   font-weight: var(--weight-semi-bold);
-  font-size: clamp(var(--font-semi-micro), 1vw, var(--font-regular));
+  font-size: var(--font-small);
   writing-mode: vertical-lr;
 }
 
@@ -142,7 +142,7 @@ input:checked + .slider:before {
   justify-content: space-between;
   align-items: center;
   color: var(--color-black);
-  padding: 16px;
+  padding: 0px 8px;
   height: var(--nav-height);
   transition-delay: var(--animation-duration-medium);
   transition: transform var(--animation-duration-medium) ease-in-out;
@@ -155,32 +155,53 @@ input:checked + .slider:before {
 }
 
 .navbar__logo {
-  min-width: 122px;
+  min-width: 110px;
   cursor: pointer;
   display: flex;
   flex-direction: column;
 }
-
+.navbar__logo:hover .navbar__logoUnderbar {
+  width: 0;
+  background: linear-gradient(0deg, var(--color-pink), var(--color-pink)) no-repeat right bottom / 0 2px;
+  transition: width 1s;
+}
+.navbar__logo:hover .navbar__logoUnderbarActive {
+  width: clamp(20px, 2.5vw, 50px);
+  background: linear-gradient(0deg, var(--color-pink), var(--color-pink)) no-repeat right bottom / 100% 2px;
+  transition-delay: 0s, 1s;
+  transition-property: width, background-size;
+  transition-duration: 1s, 1s;
+}
+.navbar__logoUnderbarActive {
+  width: 0;
+}
 .navbar__logo__developer {
   text-align: right;
   margin: 0px;
   color: var(--color-grey);
-  font-size: clamp(var(--font-micro), 1vw, var(--font-semi-micro));
+  font-size: var(--font-semi-micro);
 }
 
-.navbar__logo__name {
+.navbar__logoName {
   display: flex;
+  justify-content: end;
   font-size: var(--font-medium);
   font-weight: var(--weight-bold);
 }
-
-.navbar__logo__name:before {
-  content: "_____";
-  color: var(--color-pink);
+.navbar__logoUnderbar {
+  width: clamp(20px, 2.5vw, 50px);
+  background: linear-gradient(0deg, var(--color-pink), var(--color-pink)) no-repeat right bottom / 100% 2px;
+}
+.navbar_Hamburger,
+.navbar__HamburgerContents,
+.navbar__HamburgerContents::after,
+.navbar__HamburgerContents::before {
+  opacity: 0;
 }
 
 .navbar__menu {
   display: flex;
+  transition: var(--animation-duration-long);
 }
 
 .navbar__menu__item {
@@ -189,15 +210,6 @@ input:checked + .slider:before {
   cursor: pointer;
 }
 
-.navbar__menu__item.active > a {
-  font-size: medium;
-  color: var(--color-pink);
-  font-weight: var(--weight-regular);
-  background: linear-gradient(0deg, var(--color-pink), var(--color-pink)) no-repeat right bottom / 0 2px;
-  background-size: 100% 2px;
-  transition: background-size 350ms;
-  background-position-x: center;
-}
 .navbar__menu__item > a {
   position: relative;
   font-size: medium;
@@ -228,7 +240,7 @@ input:checked + .slider:before {
 
 .home__title__rotate {
   font-size: var(--font-extra-large);
-  line-height: clamp(55px, 8vw, 120px);
+  line-height: clamp(55px, 8vw, 105px);
   display: flex;
   color: var(--color-light-grey);
   height: clamp(55px, 7.5vw, 100px);
@@ -309,8 +321,6 @@ input:checked + .slider:before {
 }
 
 .home__description {
-  font-size: clamp(var(--font-semi-micro), 2vw, var(--font-regular));
-  font-weight: var(--weight-semi-bold);
   color: var(--color-grey);
   margin: 8px 0px;
 }
@@ -319,7 +329,7 @@ input:checked + .slider:before {
   color: var(--color-pink);
   border-radius: var(--size-border-radius);
   border: 2px solid var(--color-pink);
-  font-size: var(--font-semi-micro);
+  font-size: var(--font-small);
   font-weight: var(--weight-semi-bold);
   margin-top: 24px;
   padding: 16px 30px;
@@ -457,15 +467,59 @@ input:checked + .slider:before {
   .section {
     margin: 100px 10%;
   }
-
+  .navbar__menu {
+    transform: translateX(600px);
+    opacity: 0;
+    transition: var(--animation-duration-long);
+  }
+  .navbar_Hamburger {
+    display: inline-block;
+    position: absolute;
+    opacity: 1;
+    padding: 0 0 0 10px;
+    height: 40px;
+    width: 40px;
+    right: 10px;
+    top: 18px;
+  }
+  .navbar__HamburgerContents {
+    position: absolute;
+    opacity: 1;
+    height: 2px;
+    width: 25px;
+    top: 50%;
+    background-color: var(--color-pink);
+    transition: 0.3s;
+    transition-delay: 0.7s;
+  }
+  .navbar__HamburgerContents:before {
+    display: block;
+    position: absolute;
+    opacity: 1;
+    right: 0px;
+    height: 2px;
+    top: -8px;
+    width: 120%;
+    content: "";
+    background-color: var(--color-pink);
+    transition: 0.3s;
+    transition-delay: 0.7s;
+  }
+  .navbar__HamburgerContents:after {
+    position: absolute;
+    width: 80%;
+    top: 8px;
+    opacity: 1;
+    right: 0px;
+    height: 2px;
+    content: "";
+    background-color: var(--color-pink);
+    transition: 0.3s;
+    transition-delay: 0.7s;
+  }
   #home {
     padding-top: 50px;
     margin: 100px 10%;
-  }
-
-  #experience {
-    margin-left: 5%;
-    margin-right: 15%;
   }
 
   #testimonials {
