@@ -10,17 +10,22 @@
   const switchFixHeader = document.querySelector('#switchFixHeader');
   let lastScrollY = 0;
   let isFixedHeader = true;
+  const widthMobile = 900;
 
   window.addEventListener('load', () => {
     document.body.classList.remove('before-load');
     document.querySelector('.loading').addEventListener('transitionend', e => {
-      document.body.removeChild(e.currentTarget);
+      e.currentTarget.style.display = 'none';
     });
-  });
-  window.addEventListener('resize', () => {
-    // if (window.innerWidth > 900) {
-    //   window.location.reload();
-    // }
+    window.addEventListener('resize', () => {
+      if (window.innerWidth <= widthMobile) {
+        setTimeout(() => {
+          // navbarMenu.style.display = 'none';
+        }, 1500);
+      } else {
+        // navbarMenu.style.display = 'flex';
+      }
+    });
   });
   document.addEventListener('scroll', () => {
     if (isFixedHeader === true) return;
@@ -54,7 +59,8 @@
   });
   navbarLogo.addEventListener('click', () => {
     const element = document.getElementById('home');
-    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    const top = element.getBoundingClientRect().top - document.body.getBoundingClientRect().top - 100;
+    window.scrollTo({ top, behavior: 'smooth' });
   });
   navbarMenu.addEventListener('click', e => {
     let target = e.target;
