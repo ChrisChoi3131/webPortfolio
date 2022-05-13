@@ -13,29 +13,32 @@
   --font-medium: clamp(14px, 2vw, 28px);
   --font-regular: clamp(12px, 2vw, 20px);
   --font-small: clamp(10px, 2vw, 16px);
-  --font-semi-micro: 14px;
-  --font-micro: 10px;
+  --font-semi-micro: clamp(8px, 1vw, 14px);
+  --font-micro: clamp(6px, 0.8vw, 10px);
   --weight-bold: 700;
   --weight-semi-bold: 600;
   --weight-regular: 500;
   --size-border-radius: 4px;
   --animation-duration: 0.3s;
   --animation-duration-medium: 0.5s;
-  --nav-height: 104px;
+  --animation-duration-long: 1s;
+  --nav-height: 80px;
   --divider-height: clamp(1px, 0.2vw, 1.5px);
+  --font-family: "Roboto", sans-serif;
 }
 
 html {
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: var(--font-family);
   line-height: 1.2;
   word-wrap: break-word;
-  letter-spacing: -0.05em;
+  /* letter-spacing: -0.05em; */
 }
 
 * {
   box-sizing: border-box;
 }
 body {
+  font-family: var(--font-family);
   -webkit-font-smoothing: antialiased;
   margin: 0;
   overflow-x: hidden;
@@ -51,7 +54,7 @@ ul {
 }
 
 button {
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: var(--font-family);
   background-color: transparent;
   cursor: pointer;
   border: none;
@@ -114,5 +117,5 @@ h3 {
 p {
   font-size: var(--font-regular);
   font-weight: var(--weight-regular);
-  color: var(--color-black);
+  color: var(--color-grey);
 }
