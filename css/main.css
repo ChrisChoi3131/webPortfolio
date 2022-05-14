@@ -115,7 +115,7 @@ input:checked + .slider:before {
   margin: 0.3vh 0;
   color: var(--color-grey);
   text-align: center;
-  font-size: var(--font-small);
+  font-size: 1.2rem;
   transition: all var(--animation-duration) ease-in-out;
   -webkit-transition: all var(--animation-duration) ease-in-out;
 }
@@ -175,7 +175,7 @@ input:checked + .slider:before {
   transition: width 1s;
   -webkit-transition: width 1s;
 }
-}
+
 .navbar__logo:hover .navbar__logoUnderbarActive {
   width: clamp(20px, 2.5vw, 50px);
   background: linear-gradient(0deg, var(--color-pink), var(--color-pink)) no-repeat right bottom / 100% 2px;
@@ -531,7 +531,6 @@ input:checked + .slider:before {
     -webkit-transform: translateX(50vw);
     transition: transform 0.7s;
     -webkit-transition: transform 0.7s;
-    
   }
   .navbar__hamburgerMenu {
     display: flex;
