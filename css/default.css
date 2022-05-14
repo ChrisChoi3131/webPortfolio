@@ -70,7 +70,7 @@ h1 {
 
 h2 {
   font-size: var(--font-large);
-  font-weight: var(var(--weight-semi-bold));
+  font-weight: var(--weight-semi-bold);
   color: var(--color-black);
 }
 
