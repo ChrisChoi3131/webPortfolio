@@ -8,24 +8,38 @@
   const footerRight = document.querySelector('#footerRight');
   const footerLeft = document.querySelector('#footerLeft');
   const switchFixHeader = document.querySelector('#switchFixHeader');
+  const btnHamburger = document.querySelector('.navbar__btnHamburger');
+  const hamburgerMenuContainer = document.querySelector('.navbar__hamburgerMenuContainer');
+  const navbarHamburgerMenu = document.querySelector('.navbar__hamburgerMenu');
+  const hamburgerMenuBlur = document.querySelector('.navbar__hamburgerMenuBlur');
+  const btnCloseHamburgerMenu = document.querySelector('.hamburgerMenu__btnClose');
   let lastScrollY = 0;
   let isFixedHeader = true;
-  const widthMobile = 900;
-
+  function openHamburgerMenu() {
+    document.querySelector('.navbar__btnHamburgerContents').classList.remove('active');
+    hamburgerMenuContainer.classList.add('active');
+    hamburgerMenuBlur.classList.add('active');
+    document.body.classList.add('blur');
+    for (const child of btnCloseHamburgerMenu.children) {
+      child.classList.add('active');
+    }
+  }
+  function closeHamburgerMenu() {
+    document.querySelector('.navbar__btnHamburgerContents').classList.add('active');
+    hamburgerMenuContainer.classList.remove('active');
+    hamburgerMenuBlur.classList.remove('active');
+    document.body.classList.remove('blur');
+    for (const child of btnCloseHamburgerMenu.children) {
+      child.classList.remove('active');
+    }
+  }
   window.addEventListener('load', () => {
     document.body.classList.remove('before-load');
-    document.querySelector('.loading').addEventListener('transitionend', e => {
-      e.currentTarget.style.display = 'none';
-    });
-    window.addEventListener('resize', () => {
-      if (window.innerWidth <= widthMobile) {
-        setTimeout(() => {
-          // navbarMenu.style.display = 'none';
-        }, 1500);
-      } else {
-        // navbarMenu.style.display = 'flex';
-      }
-    });
+    setTimeout(() => {
+      document.querySelector('.loading').addEventListener('transitionend', e => {
+        e.currentTarget.style.display = 'none';
+      });
+    }, 300);
   });
   document.addEventListener('scroll', () => {
     if (isFixedHeader === true) return;
@@ -70,6 +84,15 @@
     const top = element.getBoundingClientRect().top - document.body.getBoundingClientRect().top - 100;
     window.scrollTo({ top, behavior: 'smooth' });
   });
+  navbarHamburgerMenu.addEventListener('click', e => {
+    let target = e.target;
+    target.tagName !== 'LI' ? (target = target.parentElement) : null;
+    if (!target.dataset.link) return;
+    const element = document.getElementById(target.dataset.link);
+    const top = element.getBoundingClientRect().top - document.body.getBoundingClientRect().top - 100;
+    window.scrollTo({ top, behavior: 'smooth' });
+    closeHamburgerMenu();
+  });
   const sectionsId = Array.from(sections).map(section => section.id);
   const navItems = new Map(
     sectionsId.map((sectionId, idx) => [
@@ -77,6 +100,9 @@
       { idx, element: document.querySelector(`[data-link="${sectionId}"]`) },
     ])
   );
+  btnHamburger.addEventListener('click', () => openHamburgerMenu());
+  hamburgerMenuBlur.addEventListener('click', () => closeHamburgerMenu());
+  btnCloseHamburgerMenu.addEventListener('click', () => closeHamburgerMenu());
 
   const mapEntries = new Map();
   const callbackObserver = entries => {
