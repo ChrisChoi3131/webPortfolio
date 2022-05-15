@@ -8,11 +8,12 @@
   --color-lignt-pink: #f67b7b;
   --color-white: #ffffff;
   --color-black: #000000;
+  --color-light-black: #222222;
   --font-extra-large: clamp(32px, 6vw, 80px);
   --font-large: clamp(20px, 4vw, 40px);
   --font-medium: clamp(14px, 2vw, 28px);
-  --font-regular: clamp(12px, 2vw, 20px);
-  --font-small: clamp(10px, 2vw, 16px);
+  --font-regular: clamp(12px, 1.7vw, 20px);
+  --font-small: clamp(10px, 1.5vw, 16px);
   --font-semi-micro: clamp(8px, 1vw, 14px);
   --font-micro: clamp(6px, 0.8vw, 10px);
   --weight-bold: 700;
@@ -107,15 +108,19 @@ h2.dividerLeft::before {
   height: var(--divider-height);
   background-color: var(--color-pink);
 }
-
 h3 {
   font-size: var(--font-medium);
   font-weight: var(--weight-regular);
   color: var(--color-black);
 }
-
-p {
+h4 {
   font-size: var(--font-regular);
   font-weight: var(--weight-regular);
-  color: var(--color-grey);
+  color: var(--color-black);
+}
+
+p {
+  font-size: var(--font-semi-micro);
+  font-weight: var(--weight-regular);
+  color: var(--color-black);
 }
