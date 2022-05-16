@@ -20,7 +20,8 @@
   --font-micro: clamp(6px, 0.8vw, 10px);
   --weight-bold: 700;
   --weight-semi-bold: 600;
-  --weight-regular: 500;
+  --weight-medium: 500;
+  --weight-regular: 400;
   --size-border-radius: 4px;
   --animation-duration: 0.3s;
   --animation-duration-medium: 0.5s;
@@ -93,13 +94,11 @@ h2.dividerRight::after {
   height: var(--divider-height);
   background-color: var(--color-pink);
 }
-
 h2.dividerLeft {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
 h2.dividerLeft::before {
   content: "";
   flex-grow: 1;
@@ -117,10 +116,9 @@ h3 {
 }
 h4 {
   font-size: var(--font-regular);
-  font-weight: var(--weight-regular);
+  font-weight: var(--weight-medium);
   color: var(--color-black);
 }
-
 p {
   font-size: var(--font-semi-micro);
   font-weight: var(--weight-regular);

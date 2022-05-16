@@ -13,6 +13,7 @@
   const navbarHamburgerMenu = document.querySelector('.navbar__hamburgerMenu');
   const hamburgerMenuBlur = document.querySelector('.navbar__hamburgerMenuBlur');
   const btnCloseHamburgerMenu = document.querySelector('.hamburgerMenu__btnClose');
+  const cardItems = document.querySelectorAll('.card__item');
   let lastScrollY = 0;
   let isFixedHeader = true;
   function openHamburgerMenu() {
@@ -35,11 +36,15 @@
   }
   window.addEventListener('load', () => {
     document.body.classList.remove('before-load');
+    initializeScrollPopUpElement();
     setTimeout(() => {
       document.querySelector('.loading').addEventListener('transitionend', e => {
         e.currentTarget.style.display = 'none';
       });
     }, 300);
+  });
+  window.addEventListener('resize', () => {
+    initializeScrollPopUpElement();
   });
   document.addEventListener('scroll', () => {
     if (isFixedHeader === true) return;
@@ -104,59 +109,87 @@
   hamburgerMenuBlur.addEventListener('click', () => closeHamburgerMenu());
   btnCloseHamburgerMenu.addEventListener('click', () => closeHamburgerMenu());
 
-  const mapEntries = new Map();
-  const callbackObserver = entries => {
-    if (entries.length > 1) {
-      const currEntries = [];
-      entries.forEach(entry => {
-        const currentRatio = entry.intersectionRatio;
-        const target = entry.target.id;
-        if (currentRatio > 0) {
-          currEntries.push({ target, currentRatio, idx: navItems.get(target).idx });
-          mapEntries.set(target, navItems.get(target).idx);
-        } else {
-          mapEntries.delete(target);
-        }
-      });
-      currEntries.sort((a, b) => {
-        if (b.currentRatio > a.currentRatio) {
-          return 1;
-        } else if (b.currentRatio < a.currentRatio) {
-          return -1;
-        } else {
-          if (a.idx < b.idx) {
+  {
+    const mapEntries = new Map();
+    const callbackObserver = entries => {
+      if (entries.length > 1) {
+        const currEntries = [];
+        entries.forEach(entry => {
+          const currentRatio = entry.intersectionRatio;
+          const target = entry.target.id;
+          if (currentRatio > 0) {
+            currEntries.push({ target, currentRatio, idx: navItems.get(target).idx });
+            mapEntries.set(target, navItems.get(target).idx);
+          } else {
+            mapEntries.delete(target);
+          }
+        });
+        currEntries.sort((a, b) => {
+          if (b.currentRatio > a.currentRatio) {
+            return 1;
+          } else if (b.currentRatio < a.currentRatio) {
             return -1;
           } else {
-            return 1;
+            if (a.idx < b.idx) {
+              return -1;
+            } else {
+              return 1;
+            }
+          }
+        });
+        footerRight.innerText = currEntries[0].target;
+      } else {
+        const entry = entries[0];
+        const isIntersecting = entry.isIntersecting;
+        const boundingClientRect = entry.boundingClientRect;
+        const target = entry.target.id;
+        const idx = sectionsId.indexOf(target);
+        if (isIntersecting) {
+          mapEntries.set(target, idx);
+          const [sectionName, sectionIdx] = [...mapEntries].sort((a, b) => {
+            return b[1] - a[1];
+          })[0];
+
+          footerRight.innerText = sectionName;
+        } else if (!isIntersecting) {
+          mapEntries.delete(target);
+          if (boundingClientRect.y > 0) {
+            const sectionName = idx !== 0 ? sectionsId[idx - 1] : sectionsId[idx];
+            footerRight.innerText = sectionName;
           }
         }
-      });
-      footerRight.innerText = currEntries[0].target;
-    } else {
-      const entry = entries[0];
-      const isIntersecting = entry.isIntersecting;
-      const boundingClientRect = entry.boundingClientRect;
-      const target = entry.target.id;
-      const idx = sectionsId.indexOf(target);
-      if (isIntersecting) {
-        mapEntries.set(target, idx);
-        const [sectionName, sectionIdx] = [...mapEntries].sort((a, b) => {
-          return b[1] - a[1];
-        })[0];
-
-        footerRight.innerText = sectionName;
-      } else if (!isIntersecting) {
-        mapEntries.delete(target);
-        if (boundingClientRect.y > 0) {
-          const sectionName = idx !== 0 ? sectionsId[idx - 1] : sectionsId[idx];
-          footerRight.innerText = sectionName;
-        }
       }
-    }
-  };
-  const optionsObserver = {
-    threshold: 0.2,
-  };
-  const observer = new IntersectionObserver(callbackObserver, optionsObserver);
-  sections.forEach(section => observer.observe(section));
+    };
+    const footerObserverOptions = {
+      threshold: 0.2,
+    };
+    const footerObserver = new IntersectionObserver(callbackObserver, footerObserverOptions);
+    sections.forEach(section => footerObserver.observe(section));
+  }
+  function initializeScrollPopUpElement() {
+    const callbackObserver = entries => {
+      entries.forEach(entry => {
+        const top = entry.boundingClientRect.top;
+        const element = entry.target;
+        if (top <= 0 || entry.isIntersecting) {
+          element.classList.add('active');
+        } else {
+          element.classList.remove('active');
+        }
+      });
+    };
+    cardItems.forEach(cardItem => {
+      const ratioElementHeight = cardItem.offsetHeight / window.innerHeight;
+      let threshold = 0.9;
+      if (ratioElementHeight >= 0.9) {
+        threshold = 0.3;
+      } else if (ratioElementHeight >= 0.5) {
+        threshold = 0.5;
+      }
+      const cardItemObserver = new IntersectionObserver(callbackObserver, {
+        threshold,
+      });
+      cardItemObserver.observe(cardItem);
+    });
+  }
 })();
