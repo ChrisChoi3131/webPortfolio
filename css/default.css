@@ -51,6 +51,7 @@ body {
 a {
   text-decoration: none;
   color: var(--color-black);
+  font-size: var(--font-small);
 }
 ul {
   list-style: none;
