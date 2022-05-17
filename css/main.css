@@ -223,7 +223,7 @@ input:checked + .slider:before {
 
 .navbar__menu__item > a {
   position: relative;
-  font-size: medium;
+  font-size: var(--font-small);
   font-weight: var(--weight-regular);
   background: linear-gradient(0deg, var(--color-pink), var(--color-pink)) no-repeat right bottom / 0 2px;
   transition: background-size 350ms;
@@ -361,7 +361,7 @@ input:checked + .slider:before {
 }
 
 #experience {
-  align-items: flex-end;
+  align-items: center;
   /* margin-left: 15%;
   margin-right: 15%; */
 }
@@ -373,11 +373,6 @@ input:checked + .slider:before {
   -webkit-text-fill-color: transparent;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
-}
-
-.experience__description {
-  margin-left: 40%;
-  width: 60%;
 }
 
 .work__title {
@@ -430,6 +425,7 @@ input:checked + .slider:before {
 
 #testimonials .card__colleagueInfoContainer {
   display: flex;
+  align-items: center;
 }
 #testimonials .card__colleagueInfoDetail {
   margin-left: 10px;
@@ -451,6 +447,10 @@ input:checked + .slider:before {
 #testimonials .card__contentsContainer * > h4 {
   color: var(--color-white);
   margin: 10px 0;
+}
+#testimonials .card__avatarContainer {
+  display: flex;
+  align-items: center;
 }
 #testimonials .card__avatarContainer > * {
   height: clamp(30px, 1.5vw, 40px);
