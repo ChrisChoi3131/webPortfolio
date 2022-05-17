@@ -160,7 +160,7 @@ input:checked + .slider:before {
 }
 
 .navbar__logo {
-  min-width: 110px;
+  min-width: 100px;
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -416,6 +416,7 @@ input:checked + .slider:before {
 #testimonials .card__btnSeeMore {
   cursor: pointer;
   position: fixed;
+  font-size: var(--font-small);
   right: clamp(2px, 1vw, 10px);
   bottom: clamp(2px, 0.5vw, 10px);
 }
@@ -607,12 +608,10 @@ input:checked + .slider:before {
   }
 }
 .popupAnimate {
-  transform: translateY(50px);
   opacity: 0;
   transition: all 0.7s ease;
 }
 .popupAnimate.active {
-  transform: translateY(0);
   opacity: 1;
 }
 
@@ -646,6 +645,9 @@ input:checked + .slider:before {
 }
 
 @media screen and (max-width: 900px) {
+  #navbar {
+    padding: 0 0;
+  }
   #testimonials .card__item {
     padding: 0.5rem 1rem;
     max-height: 200px;

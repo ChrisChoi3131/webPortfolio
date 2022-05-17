@@ -37,6 +37,7 @@
   window.addEventListener('load', () => {
     document.body.classList.remove('before-load');
     initializeScrollPopUpElement();
+    initializeScrollFooterText();
     setTimeout(() => {
       document.querySelector('.loading').addEventListener('transitionend', e => {
         e.currentTarget.style.display = 'none';
@@ -109,7 +110,7 @@
   hamburgerMenuBlur.addEventListener('click', () => closeHamburgerMenu());
   btnCloseHamburgerMenu.addEventListener('click', () => closeHamburgerMenu());
 
-  {
+  function initializeScrollFooterText() {
     const mapEntries = new Map();
     const callbackObserver = entries => {
       if (entries.length > 1) {
@@ -166,12 +167,16 @@
     const footerObserver = new IntersectionObserver(callbackObserver, footerObserverOptions);
     sections.forEach(section => footerObserver.observe(section));
   }
+  const setCardItemObservers = new Set();
   function initializeScrollPopUpElement() {
+    setCardItemObservers.forEach(cardItemObserver => {
+      cardItemObserver.disconnect();
+    });
+    setCardItemObservers.clear();
     const callbackObserver = entries => {
       entries.forEach(entry => {
         const top = entry.boundingClientRect.top;
         const element = entry.target;
-        console.log(element.id);
         if (top <= 0 || entry.isIntersecting) {
           element.classList.add('active');
         } else {
@@ -190,6 +195,7 @@
       const cardItemObserver = new IntersectionObserver(callbackObserver, {
         threshold,
       });
+      setCardItemObservers.add(cardItemObserver);
       cardItemObserver.observe(cardItem);
     });
   }
