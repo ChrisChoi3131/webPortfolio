@@ -337,7 +337,7 @@ input:checked + .slider:before {
   margin: 8px 0px;
 }
 
-.home__contactBtn {
+.home__btnContact {
   color: var(--color-pink);
   border-radius: var(--size-border-radius);
   border: 2px solid var(--color-pink);
