@@ -171,6 +171,7 @@
       entries.forEach(entry => {
         const top = entry.boundingClientRect.top;
         const element = entry.target;
+        console.log(element.id);
         if (top <= 0 || entry.isIntersecting) {
           element.classList.add('active');
         } else {

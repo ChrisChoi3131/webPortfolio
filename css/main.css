@@ -85,7 +85,6 @@ input:checked + .slider {
 }
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(20px);
   -ms-transform: translateX(20px);
   transform: translateX(20px);
 }
@@ -124,7 +123,6 @@ input:checked + .slider:before {
   transition: all var(--animation-duration) ease-in-out;
   transform: translateY(-3px);
   -webkit-transition: all var(--animation-duration) ease-in-out;
-  -webkit-transform: translateY(-3px);
 }
 
 #footerRight {
@@ -159,7 +157,6 @@ input:checked + .slider:before {
   transition: transform var(--animation-duration-medium) ease-in-out var(--animation-duration-medium);
   transform: translateY(calc(var(--nav-height) * -1));
   -webkit-transition: transform var(--animation-duration-medium) ease-in-out var(--animation-duration-medium);
-  -webkit-transform: translateY(calc(var(--nav-height) * -1));
 }
 
 .navbar__logo {
@@ -612,7 +609,7 @@ input:checked + .slider:before {
 .popupAnimate {
   transform: translateY(50px);
   opacity: 0;
-  transition: 1s all ease;
+  transition: all 0.7s ease;
 }
 .popupAnimate.active {
   transform: translateY(0);
@@ -721,7 +718,7 @@ input:checked + .slider:before {
     height: 100vh;
     z-index: 11;
     transform: translateX(50vw);
-    -webkit-transform: translateX(50vw);
+
     transition: transform 0.7s;
     -webkit-transition: transform 0.7s;
   }
@@ -749,7 +746,6 @@ input:checked + .slider:before {
   .navbar__hamburgerMenuContainer.active {
     transform: translateX(-100vw);
     transition: transform 0.7s;
-    -webkit-transform: translateX(-100vw);
     -webkit-transition: transform 0.7s;
   }
   .navbar__hamburgerMenuBlur.active {
