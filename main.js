@@ -14,6 +14,7 @@
   const hamburgerMenuBlur = document.querySelector('.navbar__hamburgerMenuBlur');
   const btnCloseHamburgerMenu = document.querySelector('.hamburgerMenu__btnClose');
   const cardItems = document.querySelectorAll('.card__item');
+  const btnContact = document.querySelector('.home__btnContact');
   let lastScrollY = 0;
   let isFixedHeader = true;
   function openHamburgerMenu() {
@@ -71,6 +72,11 @@
         child.style.color = 'var(--color-grey)';
       }
     }
+  });
+  btnContact.addEventListener('click', () => {
+    const element = document.getElementById('contact');
+    const top = element.getBoundingClientRect().top - document.body.getBoundingClientRect().top - 100;
+    window.scrollTo({ top, behavior: 'smooth' });
   });
   switchFixHeader.addEventListener('click', e => {
     if (e.target.tagName !== 'INPUT') return;
