@@ -15,6 +15,7 @@
   const btnCloseHamburgerMenu = document.querySelector('.hamburgerMenu__btnClose');
   const popupAnimateElements = document.querySelectorAll('.popupAnimate');
   const btnContact = document.querySelector('.home__btnContact');
+  const experienceContainer = document.querySelector('.experience__container');
   let lastScrollY = 0;
   let isFixedHeader = true;
   function openHamburgerMenu() {
@@ -35,18 +36,20 @@
       child.classList.remove('active');
     }
   }
-  window.addEventListener('load', () => {
+  window.addEventListener('load', async () => {
     document.body.classList.remove('before-load');
     initializeScrollPopUpElement();
     initializeScrollFooterText();
+    await initializeWidenBackgroundSection();
     setTimeout(() => {
       document.querySelector('.loading').addEventListener('transitionend', e => {
         e.currentTarget.style.display = 'none';
       });
     }, 300);
   });
-  window.addEventListener('resize', () => {
+  window.addEventListener('resize', async () => {
     initializeScrollPopUpElement();
+    await initializeWidenBackgroundSection();
   });
   document.addEventListener('scroll', () => {
     if (isFixedHeader === true) return;
@@ -73,6 +76,7 @@
       }
     }
   });
+  // document.addEventListener('scroll', () => { });
   btnContact.addEventListener('click', () => {
     const element = document.getElementById('contact');
     const top = element.getBoundingClientRect().top - document.body.getBoundingClientRect().top - 100;
@@ -115,6 +119,46 @@
   btnHamburger.addEventListener('click', () => openHamburgerMenu());
   hamburgerMenuBlur.addEventListener('click', () => closeHamburgerMenu());
   btnCloseHamburgerMenu.addEventListener('click', () => closeHamburgerMenu());
+  const widenBackgroundSizeSet = new Set(document.querySelectorAll('.scaleUpBg'));
+  function initializeWidenBackgroundSection() {
+    new Promise(resolve => {
+      widenBackgroundSizeSet.forEach(element => {
+        widenBackgroundSize(element);
+      });
+      resolve();
+    });
+  }
+  function callbackWidenBackgroundSection() {
+    widenBackgroundSize(experienceContainer);
+  }
+  {
+    const callbackObserver = entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) window.addEventListener('scroll', callbackWidenBackgroundSection);
+        else window.removeEventListener('scroll', callbackWidenBackgroundSection);
+      });
+    };
+    const observer = new IntersectionObserver(callbackObserver, {
+      threshold: 0,
+    });
+    observer.observe(experienceContainer);
+  }
+  /*
+  TODO: Add parameter 'target element width'
+   */
+
+  function widenBackgroundSize(element) {
+    const top = element.getBoundingClientRect().top;
+    const ratio = (window.innerHeight - top) / (window.innerHeight - navbar.offsetHeight);
+    const ratioRadius = 1 - (ratio - 0.6) / 0.4;
+    if (top < 0) {
+      element.style.width = '100vw';
+      element.style['border-radius'] = 0;
+    } else if (ratio >= 0.6) {
+      element.style.width = `${ratio * 100}vw`;
+      element.style['border-radius'] = `${ratioRadius * 20}px`;
+    }
+  }
 
   function initializeScrollFooterText() {
     const mapEntries = new Map();
