@@ -362,8 +362,7 @@ input:checked + .slider:before {
 
 #experience {
   align-items: center;
-  /* margin-left: 15%;
-  margin-right: 15%; */
+  height: 300vh;
 }
 
 .experience__title {
@@ -406,11 +405,14 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 1rem 2rem;
+  padding: 1rem 1.7rem;
   border-radius: 10px;
   box-shadow: 5px 5px 20px #6d6b6b6b;
 }
 #testimonials .card__btnSeeMore {
+  /* position: sticky; */
+  bottom: 0;
+  right: 0;
   display: flex;
   cursor: pointer;
   justify-content: flex-end;
@@ -453,8 +455,8 @@ input:checked + .slider:before {
   align-items: center;
 }
 #testimonials .card__avatarContainer > * {
-  height: clamp(30px, 1.5vw, 40px);
-  height: clamp(30px, 1.5vw, 40px);
+  height: clamp(30px, 2.5vw, 40px);
+  height: clamp(30px, 2.5vw, 40px);
   border-radius: 50%;
   border: 2px solid var(--color-white);
 }
@@ -489,7 +491,7 @@ input:checked + .slider:before {
   grid-row: 1/2;
 }
 #testimonials .card__item:nth-child(2) p {
-  -webkit-line-clamp: 10;
+  -webkit-line-clamp: 9;
 }
 #testimonials .card__item:nth-child(3) {
   background-color: #207087;
@@ -616,7 +618,7 @@ input:checked + .slider:before {
     flex-direction: column;
   }
   #testimonials .card__item {
-    padding: 1rem 1.5rem;
+    padding: 0.8rem 1.4rem;
     max-height: 300px;
     display: -webkit-box;
     -webkit-box-orient: vertical;
