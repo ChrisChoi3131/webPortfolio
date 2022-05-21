@@ -1,0 +1,40 @@
+#experience {
+  align-items: center;
+}
+#experience h1,
+h2,
+h3,
+h4,
+p {
+  color: var(--color-white);
+}
+
+.experience__title {
+  background: linear-gradient(-70deg, var(--color-pink) 40%, var(--color-light-purple) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+.experience__container {
+  height: 100%;
+  width: 50vw;
+  background-color: #050d21;
+  border-radius: 20px;
+  text-align: center;
+}
+
+#experience .contents {
+  position: relative;
+
+  align-items: center;
+  left: calc(-50vw + 50%);
+  width: 100vw;
+  height: inherit;
+}
+#experience .content {
+  width: 80vw;
+  min-height: 200px;
+  text-align: left;
+}
