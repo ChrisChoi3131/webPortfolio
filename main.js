@@ -151,10 +151,10 @@
     const top = element.getBoundingClientRect().top;
     const ratio = (window.innerHeight - top) / (window.innerHeight - navbar.offsetHeight);
     const ratioRadius = 1 - (ratio - 0.6) / 0.4;
-    if (top < 0) {
+    if (top <= 0) {
       element.style.width = '100vw';
       element.style['border-radius'] = 0;
-    } else if (ratio >= 0.6) {
+    } else if (ratio >= 0.5) {
       element.style.width = `${ratio * 100}vw`;
       element.style['border-radius'] = `${ratioRadius * 20}px`;
     }
