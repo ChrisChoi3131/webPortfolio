@@ -1,0 +1,53 @@
+@keyframes loading-spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loading-circle-ani {
+  0% {
+    stroke-dashoffset: 157;
+  }
+  75% {
+    stroke-dashoffset: -147;
+  }
+  100% {
+    stroke-dashoffset: -157;
+  }
+}
+
+@keyframes opacity {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes rotateHomeItem {
+  0%,
+  12.66%,
+  100% {
+    transform: translateY(0);
+  }
+  16.66%,
+  29.32% {
+    transform: translateY(-100%);
+  }
+  33.32%,
+  45.98% {
+    transform: translateY(-200%);
+  }
+  49.98%,
+  62.64% {
+    transform: translateY(-300%);
+  }
+  66.64%,
+  79.3% {
+    transform: translateY(-200%);
+  }
+  83.3%,
+  95.96% {
+    transform: translateY(-100%);
+  }
+}

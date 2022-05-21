@@ -2,6 +2,12 @@
 @import url("layout.css");
 @import url("padding.css");
 @import url("margin.css");
+@import url("transition.css");
+@import url("./sections/home.css");
+@import url("./sections/aboutme.css");
+@import url("./sections/experience.css");
+@import url("./sections/work.css");
+@import url("./sections/contactme.css");
 
 body.before-load {
   overflow: hidden;
@@ -237,12 +243,6 @@ input:checked + .slider:before {
   color: var(--color-pink);
 }
 
-#home {
-  height: 100vh;
-  padding-top: 20vh;
-  min-height: 800px;
-}
-
 .home__title {
   font-size: var(--font-extra-large);
   font-weight: var(--weight-bold);
@@ -278,17 +278,6 @@ input:checked + .slider:before {
   vertical-align: top;
 }
 
-@keyframes opacity {
-  0%,
-  100% {
-    opacity: 0;
-  }
-
-  50% {
-    opacity: 1;
-  }
-}
-
 .home__rotateList {
   min-width: clamp(150px, 10vw, 200px);
   font-weight: var(--weight-bold);
@@ -299,37 +288,9 @@ input:checked + .slider:before {
 }
 
 .home__rotateList__item {
-  animation-name: change;
+  animation-name: rotateHomeItem;
   animation-duration: 8s;
   animation-iteration-count: infinite;
-}
-
-@keyframes change {
-  0%,
-  12.66%,
-  100% {
-    transform: translateY(0);
-  }
-  16.66%,
-  29.32% {
-    transform: translateY(-100%);
-  }
-  33.32%,
-  45.98% {
-    transform: translateY(-200%);
-  }
-  49.98%,
-  62.64% {
-    transform: translateY(-300%);
-  }
-  66.64%,
-  79.3% {
-    transform: translateY(-200%);
-  }
-  83.3%,
-  95.96% {
-    transform: translateY(-100%);
-  }
 }
 
 .home__description {
@@ -628,22 +589,7 @@ p {
 .before-load .loading {
   opacity: 1;
 }
-@keyframes loading-spin {
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes loading-circle-ani {
-  0% {
-    stroke-dashoffset: 157;
-  }
-  75% {
-    stroke-dashoffset: -147;
-  }
-  100% {
-    stroke-dashoffset: -157;
-  }
-}
+
 .stickyContainer {
   height: 50%;
   right: 0;
@@ -806,11 +752,6 @@ p {
   }
   .navbar__hamburgerMenu__item > *:hover {
     color: var(--color-black);
-  }
-  @keyframes stripes {
-    to {
-      background-size: 100% 100%;
-    }
   }
   .navbar__hamburgerMenuContainer.active {
     transform: translateX(-100vw);
