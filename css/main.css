@@ -8,7 +8,7 @@
 @import url("./sections/experience.css");
 @import url("./sections/work.css");
 @import url("./sections/testimonial.css");
-@import url("./sections/contactme.css");
+@import url("./sections/contact.css");
 
 @media screen and (max-width: 900px) {
   #navbar {
@@ -450,45 +450,6 @@ input:checked + .slider:before {
   -webkit-text-fill-color: transparent;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
-}
-
-#contact {
-  background-color: var(--color-pink);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 0;
-  padding-top: 50px;
-  width: 100%;
-  max-width: none;
-}
-.contact__title {
-  font-size: var(--font-extra-large);
-  font-weight: var(--weight-bold);
-  color: var(--color-white);
-  margin: 5vh 0 0 0;
-}
-.contact__description {
-  font-size: var(--font-regular);
-  font-weight: var(--weight-regular);
-  color: var(--color-white);
-  margin: 16px 0px;
-}
-.contact__copyright {
-  font-size: var(--font-regular);
-  font-weight: var(--weight-regular);
-  color: var(--color-white);
-  margin-top: 5vh;
-}
-
-.contact__contactBtn {
-  color: var(--color-white);
-  border-radius: var(--size-border-radius);
-  border: 2px solid var(--color-white);
-  font-size: var(--font-semi-micro);
-  font-weight: var(--weight-semi-bold);
-  margin-top: 24px;
-  padding: 16px 30px;
 }
 
 .stickyContainer {
