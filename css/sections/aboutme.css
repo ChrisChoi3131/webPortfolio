@@ -1,0 +1,12 @@
+.about__title {
+  background: linear-gradient(-70deg, var(--color-light-purple) 0%, var(--color-pink) 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.about__description {
+  width: 60%;
+}

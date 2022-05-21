@@ -53,9 +53,12 @@ a {
   color: var(--color-black);
   font-size: var(--font-regular);
 }
-ul {
+ul,
+ol {
   list-style: none;
   padding-left: 0px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 button {

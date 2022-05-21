@@ -15,7 +15,7 @@
     <script src="main.js" defer></script>
     <link rel="stylesheet" href="./css/main.css" />
   </head>
-  <body class="before-load">
+  <body class="beforeLoad">
     <div class="loading">
       <svg class="loading-circle">
         <circle cx="50%" cy="50%" r="25" fill="none"></circle>
@@ -36,355 +36,361 @@
       </ul>
     </div>
     <div class="navbar__hamburgerMenuBlur"></div>
-    <div class="container">
-      <nav id="navbar">
-        <div class="navbar__logo">
-          <div class="navbar__logoName">
-            <div class="navbar__logoUnderbar"></div>
-            <div class="navbar__logoUnderbarActive"></div>
-            <a>Yongrak Choi</a>
-          </div>
-          <a class="navbar__logo__developer">Web Developer</a>
+
+    <nav id="navbar">
+      <div class="navbar__logo">
+        <div class="navbar__logoName">
+          <div class="navbar__logoUnderbar"></div>
+          <div class="navbar__logoUnderbarActive"></div>
+          <a>Yongrak Choi</a>
         </div>
-        <button class="navbar__btnHamburger">
-          <div class="navbar__btnHamburgerContents active"></div>
-        </button>
-        <ul class="navbar__menu">
-          <li class="navbar__menu__item" data-link="home"><a>Home</a></li>
-          <li class="navbar__menu__item" data-link="about"><a>About</a></li>
-          <li class="navbar__menu__item" data-link="experience"><a>Experience</a></li>
-          <li class="navbar__menu__item" data-link="work"><a>Work</a></li>
-          <li class="navbar__menu__item" data-link="testimonials"><a>Testimonials</a></li>
-          <li class="navbar__menu__item" data-link="contact"><a>Contact</a></li>
-          <div id="switchFixHeader" class="switch tooltip">
-            <label>
-              <input type="checkbox" role="switch" checked />
-              <div class="slider round"></div>
-            </label>
-            <span class="tooltiptext">Fix header</span>
-          </div>
+        <a class="navbar__logo__developer">Web Developer</a>
+      </div>
+      <button class="navbar__btnHamburger">
+        <div class="navbar__btnHamburgerContents active"></div>
+      </button>
+      <ul class="navbar__menu">
+        <li class="navbar__menu__item" data-link="home"><a>Home</a></li>
+        <li class="navbar__menu__item" data-link="about"><a>About</a></li>
+        <li class="navbar__menu__item" data-link="experience"><a>Experience</a></li>
+        <li class="navbar__menu__item" data-link="work"><a>Work</a></li>
+        <li class="navbar__menu__item" data-link="testimonials"><a>Testimonials</a></li>
+        <li class="navbar__menu__item" data-link="contact"><a>Contact</a></li>
+        <div id="switchFixHeader" class="switch tooltip">
+          <label>
+            <input type="checkbox" role="switch" checked />
+            <div class="slider round"></div>
+          </label>
+          <span class="tooltiptext">Fix header</span>
+        </div>
+      </ul>
+    </nav>
+    <footer id="footerLeft">
+      <a href="https://github.com/ChrisChoi3131" target="_blank"><i class="fa-brands fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/yongrak-choi-59820b165/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+    </footer>
+    <footer id="footerRight"></footer>
+    <section id="home" class="section" data-idx="0">
+      <div class="home__title__rotate">
+        <h1 class="home__title">Hello,</h1>
+        <ul class="home__rotateList">
+          <li class="home__rotateList__item">World !</li>
+          <li class="home__rotateList__item">JavaScript</li>
+          <li class="home__rotateList__item">🇺🇸</li>
+          <li class="home__rotateList__item">Seattle</li>
         </ul>
-      </nav>
-      <footer id="footerLeft">
-        <a href="https://github.com/ChrisChoi3131" target="_blank"><i class="fa-brands fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/yongrak-choi-59820b165/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-      </footer>
-      <footer id="footerRight"></footer>
-      <section id="home" class="section" data-idx="0">
-        <div class="home__title__rotate">
-          <h1 class="home__title">Hello,</h1>
-          <ul class="home__rotateList">
-            <li class="home__rotateList__item">World !</li>
-            <li class="home__rotateList__item">JavaScript</li>
-            <li class="home__rotateList__item">🇺🇸</li>
-            <li class="home__rotateList__item">Seattle</li>
-          </ul>
-        </div>
-        <h1 class="home__title">I'm Yongrak Choi, <br />I build things for the Web.</h1>
-        <p class="home__description">
-          I’m a software engineer having a growth mindset. <br />
-          I just immigrated to the US as a permanent resident. <br />
-          Currently, I'm looking for a job in the greater Seattle area.<br />
+      </div>
+      <h1 class="home__title">I'm Yongrak Choi, <br />I build things for the Web.</h1>
+      <h3 class="home__description">
+        I’m a software engineer having a growth mindset. <br />
+        I just immigrated to the US as a permanent resident. <br />
+        Currently, I'm looking for a job in the greater Seattle area.<br />
+      </h3>
+      <button class="home__btnContact">Contact me</button>
+    </section>
+    <section id="about" class="section" data-idx="1">
+      <h1 class="about__title popupAnimate">About Me</h1>
+      <div>
+        <p class="about__description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat magnam aspernatur voluptate doloribus natus dolore optio voluptatum. Quaerat, ipsum, fugit tempora praesentium odit nulla cum
+          sint blanditiis eos quas architecto! Laudantium repellat nam aperiam quod sed? Quas doloribus magnam id! Reprehenderit dignissimos praesentium nulla ipsum nisi. Accusantium laboriosam modi,
+          ut reprehenderit, reiciendis sint, quod sed perspiciatis nemo doloribus repellendus. Ab eum saepe dignissimos veritatis? Voluptates eligendi expedita nihil odio suscipit, quaerat ipsa
+          reiciendis unde repellat sapiente vero voluptatem dolorem, nemo iusto soluta aliquid ratione culpa deleniti consequuntur facere optio! Magnam, laboriosam iste quos dolorem quae a soluta
+          veritatis aperiam inventore minima, consequuntur, voluptate eum ipsa! Neque placeat perspiciatis provident! Cum ullam, veniam blanditiis quibusdam, quo ducimus consectetur cupiditate omnis
+          odit quis voluptates ex itaque tempore error dolores soluta, sapiente voluptate laborum iste nesciunt! Exercitationem iste amet nostrum minima facilis, asperiores dolor reprehenderit eum
+          aperiam facere esse laudantium ratione atque voluptatem, necessitatibus quo delectus? Qui perspiciatis obcaecati, laborum fugiat facere id unde vero sapiente impedit neque natus ab
+          repellendus, recusandae repellat dolores at culpa quaerat nam reprehenderit! Aliquam, atque voluptatum. Eaque expedita accusamus quia cupiditate in aut veritatis optio ducimus beatae
+          consequuntur nostrum magni dolorem, ipsam excepturi reiciendis sapiente quos sit? Dicta nihil quod excepturi eos, libero repellendus eligendi. Iste itaque quam eaque, magnam nobis maxime,
+          nemo nisi aliquid quo minus adipisci dolorum, maiores quis nostrum? Quam officiis impedit maxime architecto esse distinctio consequuntur magnam molestias molestiae, perferendis pariatur
+          inventore praesentium atque illum rerum nulla optio consequatur delectus. Dignissimos asperiores in vero voluptate beatae nulla aliquid maxime illo, at iure accusantium quidem delectus
+          adipisci, fugit distinctio, odio veniam modi! Impedit ipsam eligendi, itaque corporis dolorem deserunt, eius porro laudantium dolorum autem ratione est totam aut numquam reprehenderit
+          reiciendis omnis cum inventore officiis enim accusantium. Quas nihil cum quibusdam ea in eius doloribus eos omnis adipisci ipsum ex, cumque nemo! Quasi porro minima ea impedit sequi
+          excepturi sint eligendi laboriosam expedita possimus nobis, omnis animi commodi molestiae provident eius reprehenderit, dolorem explicabo iste quas ipsum quos! Similique, voluptatum a in
+          odit aliquam iste laudantium commodi veritatis porro id ab beatae voluptatem. Vero nostrum doloremque neque quia illo saepe sequi numquam ipsa quos consequatur, enim error eius. Voluptate
+          nisi aut voluptatibus temporibus saepe alias autem excepturi ex? Expedita iure nemo ipsum facilis voluptatum, deleniti, blanditiis molestias quis facere vitae nisi alias neque laboriosam
+          excepturi perferendis eius cum deserunt. Aperiam rerum modi commodi inventore, sed sit id, aliquam amet voluptates ut perferendis architecto saepe? Eos eius id itaque culpa ipsam molestiae,
+          accusantium minima cupiditate enim rerum saepe cumque nobis dolorum cum quibusdam ullam maxime? Enim impedit, porro inventore dignissimos quibusdam sit quia labore rem dolores atque aut
+          animi amet, minus unde? Animi, cum a culpa ducimus placeat ut, totam enim unde iure maxime magni, vero natus minus voluptates asperiores consequatur rem! Voluptas distinctio, sequi nobis
+          explicabo qui nemo deleniti corporis quaerat quasi, maxime ipsa ut ratione dolores nulla nihil temporibus nam tenetur repellat inventore, quo odit minima. Et dolorem blanditiis, ab sunt
+          impedit rerum.
         </p>
-        <button class="home__btnContact">Contact me</button>
-      </section>
-      <section id="about" class="section" data-idx="1">
-        <h2 class="about__title popupAnimate">About Me</h2>
-        <div>
-          <p class="about__description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat magnam aspernatur voluptate doloribus natus dolore optio voluptatum. Quaerat, ipsum, fugit tempora praesentium odit nulla
-            cum sint blanditiis eos quas architecto! Laudantium repellat nam aperiam quod sed? Quas doloribus magnam id! Reprehenderit dignissimos praesentium nulla ipsum nisi. Accusantium laboriosam
-            modi, ut reprehenderit, reiciendis sint, quod sed perspiciatis nemo doloribus repellendus. Ab eum saepe dignissimos veritatis? Voluptates eligendi expedita nihil odio suscipit, quaerat
-            ipsa reiciendis unde repellat sapiente vero voluptatem dolorem, nemo iusto soluta aliquid ratione culpa deleniti consequuntur facere optio! Magnam, laboriosam iste quos dolorem quae a
-            soluta veritatis aperiam inventore minima, consequuntur, voluptate eum ipsa! Neque placeat perspiciatis provident! Cum ullam, veniam blanditiis quibusdam, quo ducimus consectetur
-            cupiditate omnis odit quis voluptates ex itaque tempore error dolores soluta, sapiente voluptate laborum iste nesciunt! Exercitationem iste amet nostrum minima facilis, asperiores dolor
-            reprehenderit eum aperiam facere esse laudantium ratione atque voluptatem, necessitatibus quo delectus? Qui perspiciatis obcaecati, laborum fugiat facere id unde vero sapiente impedit
-            neque natus ab repellendus, recusandae repellat dolores at culpa quaerat nam reprehenderit! Aliquam, atque voluptatum. Eaque expedita accusamus quia cupiditate in aut veritatis optio
-            ducimus beatae consequuntur nostrum magni dolorem, ipsam excepturi reiciendis sapiente quos sit? Dicta nihil quod excepturi eos, libero repellendus eligendi. Iste itaque quam eaque, magnam
-            nobis maxime, nemo nisi aliquid quo minus adipisci dolorum, maiores quis nostrum? Quam officiis impedit maxime architecto esse distinctio consequuntur magnam molestias molestiae,
-            perferendis pariatur inventore praesentium atque illum rerum nulla optio consequatur delectus. Dignissimos asperiores in vero voluptate beatae nulla aliquid maxime illo, at iure
-            accusantium quidem delectus adipisci, fugit distinctio, odio veniam modi! Impedit ipsam eligendi, itaque corporis dolorem deserunt, eius porro laudantium dolorum autem ratione est totam
-            aut numquam reprehenderit reiciendis omnis cum inventore officiis enim accusantium. Quas nihil cum quibusdam ea in eius doloribus eos omnis adipisci ipsum ex, cumque nemo! Quasi porro
-            minima ea impedit sequi excepturi sint eligendi laboriosam expedita possimus nobis, omnis animi commodi molestiae provident eius reprehenderit, dolorem explicabo iste quas ipsum quos!
-            Similique, voluptatum a in odit aliquam iste laudantium commodi veritatis porro id ab beatae voluptatem. Vero nostrum doloremque neque quia illo saepe sequi numquam ipsa quos consequatur,
-            enim error eius. Voluptate nisi aut voluptatibus temporibus saepe alias autem excepturi ex? Expedita iure nemo ipsum facilis voluptatum, deleniti, blanditiis molestias quis facere vitae
-            nisi alias neque laboriosam excepturi perferendis eius cum deserunt. Aperiam rerum modi commodi inventore, sed sit id, aliquam amet voluptates ut perferendis architecto saepe? Eos eius id
-            itaque culpa ipsam molestiae, accusantium minima cupiditate enim rerum saepe cumque nobis dolorum cum quibusdam ullam maxime? Enim impedit, porro inventore dignissimos quibusdam sit quia
-            labore rem dolores atque aut animi amet, minus unde? Animi, cum a culpa ducimus placeat ut, totam enim unde iure maxime magni, vero natus minus voluptates asperiores consequatur rem!
-            Voluptas distinctio, sequi nobis explicabo qui nemo deleniti corporis quaerat quasi, maxime ipsa ut ratione dolores nulla nihil temporibus nam tenetur repellat inventore, quo odit minima.
-            Et dolorem blanditiis, ab sunt impedit rerum.
-          </p>
+      </div>
+    </section>
+    <section id="experience" class="section" data-idx="2">
+      <div id="svgContainer"></div>
+      <h1 class="experience__title popupAnimate">Experience</h1>
+      <div class="experience__container scaleUpBg">
+        <div class="contents d-flex flex-column">
+          <div class="stickyContainer position-absolute">
+            <div class="sticky position-sticky"><h2>Image</h2></div>
+          </div>
+          <div class="content pt-1"></div>
+          <div class="content">
+            <ul>
+              <li><h2>Lorem ipsum dolor sit amet.</h2></li>
+              <li><h2>Lorem ipsum dolor sit amet.</h2></li>
+              <li><h2>Lorem ipsum dolor sit amet.</h2></li>
+              <li><h2>Lorem ipsum dolor sit amet.</h2></li>
+              <li><h2>Lorem ipsum dolor sit amet.</h2></li>
+              <li><h2>Lorem ipsum dolor sit amet.</h2></li>
+              <li><h2>Lorem ipsum dolor sit amet.</h2></li>
+              <li><h2>Lorem ipsum dolor sit amet.</h2></li>
+              <li><h2>Lorem ipsum dolor sit amet.</h2></li>
+              <li><h2>Lorem ipsum dolor sit amet.</h2></li>
+              <li><h2>Lorem ipsum dolor sit amet.</h2></li>
+              <li><h2>Lorem ipsum dolor sit amet.</h2></li>
+              <li><h2>Lorem ipsum dolor sit amet.</h2></li>
+              <li><h2>Lorem ipsum dolor sit amet.</h2></li>
+              <li><h2>Lorem ipsum dolor sit amet.</h2></li>
+              <li><h2>Lorem ipsum dolor sit amet.</h2></li>
+              <li><h2>Lorem ipsum dolor sit amet.</h2></li>
+              <li><h2>Lorem ipsum dolor sit amet.</h2></li>
+              <li><h2>Lorem ipsum dolor sit amet.</h2></li>
+              <li><h2>Lorem ipsum dolor sit amet.</h2></li>
+              <li><h2>Lorem ipsum dolor sit amet.</h2></li>
+              <li><h2>Lorem ipsum dolor sit amet.</h2></li>
+              <li><h2>Lorem ipsum dolor sit amet.</h2></li>
+              <li><h2>Lorem ipsum dolor sit amet.</h2></li>
+              <li><h2>Lorem ipsum dolor sit amet.</h2></li>
+              <li><h2>Lorem ipsum dolor sit amet.</h2></li>
+              <li><h2>Lorem ipsum dolor sit amet.</h2></li>
+              <li><h2>Lorem ipsum dolor sit amet.</h2></li>
+              <li><h2>Lorem ipsum dolor sit amet.</h2></li>
+            </ul>
+          </div>
         </div>
-      </section>
-      <section id="experience" class="section" data-idx="2">
-        <h2 class="experience__title popupAnimate">Experience</h2>
-        <canvas class="experience__container scaleUpBg">
-          <h1>dfdfdfdfdfdfdf</h1>
-          <h2>dddd</h2>
-          <p class="experience__description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta possimus sapiente quasi maiores officiis ad cumque aliquid natus quas dolore et veritatis rem nemo quam, unde nulla fugiat
-            sit ex pariatur iure voluptatem placeat officia? Eaque fugiat officiis iure odit dolorem eum odio illum a nisi deleniti dolorum corporis, ab numquam labore dicta maxime vel vitae veritatis
-            omnis? Dolor reiciendis, numquam quis ratione architecto recusandae, earum officia quo ea adipisci enim blanditiis quas ex odit. Architecto dolores dolor corrupti aliquam enim. Laboriosam,
-            nam? Voluptatibus odio fuga cupiditate sit et recusandae. Voluptatum itaque praesentium ipsum, voluptatem quas magni magnam sit quo sint optio a asperiores dolor corrupti facere veritatis
-            labore modi maiores tempora laudantium aliquid fuga accusamus corporis. Velit natus eius, omnis id totam ex voluptatum cupiditate! Facilis quis a adipisci accusantium enim. Eligendi
-            consectetur doloremque cupiditate corrupti possimus dolores suscipit dolor quidem adipisci dolorum eaque incidunt, sapiente, cum voluptatum illum! Harum rerum labore id iure nam? Ad iure
-            aperiam quasi neque doloribus cumque facilis illum atque eveniet quod, culpa dolorum blanditiis sapiente omnis architecto ullam qui maiores voluptatibus vel tenetur molestiae et commodi,
-            at repellat! Repudiandae quas cumque, corrupti, quam odit doloremque necessitatibus sapiente illum quos quia ad, distinctio excepturi consectetur impedit dolorem ratione error nostrum
-            minus facere quaerat temporibus. Molestias sunt quos voluptate velit molestiae quod praesentium, eveniet quisquam ipsa fugit tempora autem eum porro voluptas nisi voluptatem dicta numquam!
-            Et voluptates debitis velit quas inventore? Vel facilis qui consectetur esse voluptates officia repellat, explicabo architecto atque magnam quo impedit, facere perferendis molestiae aut?
-            Ipsam, amet. Hic corporis quam, at ab earum fugiat, illum deserunt nostrum quia possimus nemo quae temporibus? Doloribus sit debitis iure commodi ipsam. Voluptas illo veniam aspernatur
-            officia suscipit maiores quod, distinctio officiis architecto, ducimus aliquid. Fuga quod quam, laborum perspiciatis ducimus nobis ad minus?
-          </p>
-          <h1>dfdfdfdfdfdfdf</h1>
-          <h2>dddd</h2>
-          <p class="experience__description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta possimus sapiente quasi maiores officiis ad cumque aliquid natus quas dolore et veritatis rem nemo quam, unde nulla fugiat
-            sit ex pariatur iure voluptatem placeat officia? Eaque fugiat officiis iure odit dolorem eum odio illum a nisi deleniti dolorum corporis, ab numquam labore dicta maxime vel vitae veritatis
-            omnis? Dolor reiciendis, numquam quis ratione architecto recusandae, earum officia quo ea adipisci enim blanditiis quas ex odit. Architecto dolores dolor corrupti aliquam enim. Laboriosam,
-            nam? Voluptatibus odio fuga cupiditate sit et recusandae. Voluptatum itaque praesentium ipsum, voluptatem quas magni magnam sit quo sint optio a asperiores dolor corrupti facere veritatis
-            labore modi maiores tempora laudantium aliquid fuga accusamus corporis. Velit natus eius, omnis id totam ex voluptatum cupiditate! Facilis quis a adipisci accusantium enim. Eligendi
-            consectetur doloremque cupiditate corrupti possimus dolores suscipit dolor quidem adipisci dolorum eaque incidunt, sapiente, cum voluptatum illum! Harum rerum labore id iure nam? Ad iure
-            aperiam quasi neque doloribus cumque facilis illum atque eveniet quod, culpa dolorum blanditiis sapiente omnis architecto ullam qui maiores voluptatibus vel tenetur molestiae et commodi,
-            at repellat! Repudiandae quas cumque, corrupti, quam odit doloremque necessitatibus sapiente illum quos quia ad, distinctio excepturi consectetur impedit dolorem ratione error nostrum
-            minus facere quaerat temporibus. Molestias sunt quos voluptate velit molestiae quod praesentium, eveniet quisquam ipsa fugit tempora autem eum porro voluptas nisi voluptatem dicta numquam!
-            Et voluptates debitis velit quas inventore? Vel facilis qui consectetur esse voluptates officia repellat, explicabo architecto atque magnam quo impedit, facere perferendis molestiae aut?
-            Ipsam, amet. Hic corporis quam, at ab earum fugiat, illum deserunt nostrum quia possimus nemo quae temporibus? Doloribus sit debitis iure commodi ipsam. Voluptas illo veniam aspernatur
-            officia suscipit maiores quod, distinctio officiis architecto, ducimus aliquid. Fuga quod quam, laborum perspiciatis ducimus nobis ad minus?
-          </p>
-        </canvas>
-      </section>
-      <section id="work" class="section" data-idx="3">
-        <h2 class="work__title popupAnimate">Work</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora molestias id soluta eligendi corrupti quaerat quibusdam hic voluptatibus voluptate, repellendus adipisci veritatis, ratione
-          itaque at provident eveniet harum explicabo illum repudiandae? Ex velit doloremque saepe cupiditate deserunt eius quo beatae placeat iusto neque, facere, itaque necessitatibus cumque amet
-          ipsam architecto animi accusamus voluptates tempora odit et reprehenderit ad? Magnam temporibus pariatur veritatis itaque ex modi cum iure sit, at ipsam nemo quasi, ratione laborum impedit
-          illo recusandae ipsa officiis fugit explicabo doloribus veniam. Laboriosam corrupti officiis ut reiciendis, rerum at sed, obcaecati omnis quidem amet consequuntur repudiandae ex non,
-          recusandae voluptas quos quis nostrum nisi enim aliquam. Corrupti minima, accusamus est dolore illo excepturi dolor natus illum aspernatur vitae obcaecati sint culpa officia accusantium.
-          Fuga laudantium odit autem labore, cupiditate assumenda adipisci repellendus harum? Perspiciatis labore eligendi eos at repudiandae, delectus officia qui iure natus soluta nobis nisi tempora
-          obcaecati ipsum ex quia unde voluptate odit rem suscipit numquam voluptates exercitationem quae pariatur? Alias non itaque tempora, officia, voluptatibus error quas dicta et obcaecati
-          sapiente corporis quia, animi asperiores omnis incidunt dolore maxime laudantium expedita sint rem? Aut doloribus, iste odit debitis optio eius exercitationem veniam fugiat in blanditiis
-          sint quasi enim distinctio dolorum recusandae nobis et, asperiores quidem repudiandae harum saepe tenetur molestiae officia dicta. Nisi impedit asperiores ut architecto! Et mollitia id fuga
-          repellendus saepe facere voluptatibus incidunt, sint molestias sequi delectus vel modi nulla magnam nihil deleniti dolorem eligendi rerum explicabo atque illo. Eveniet voluptatem soluta
-          cumque officiis earum. Velit ad exercitationem distinctio rerum earum alias provident aliquid sint ipsa, omnis repudiandae vitae suscipit minima quidem accusamus impedit, quaerat nobis id
-          quam rem nemo maiores quis reiciendis! Dignissimos reprehenderit voluptate impedit incidunt recusandae, fugit nesciunt velit rem alias delectus vero ipsa sequi, in accusamus nisi itaque
-          quasi!
-        </p>
-        <h4>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat dolore, dolor, ratione veniam doloribus porro voluptate explicabo error odio blanditiis magni quod pariatur saepe facere
-          commodi necessitatibus asperiores reprehenderit obcaecati.
-        </h4>
-      </section>
-      <section id="testimonials" class="section" data-idx="4">
-        <h2 class="testimonials__title popupAnimate">Testimonials</h2>
-        <div class="cardContainer">
-          <div class="card__innerContainer">
-            <div class="card__item popupAnimate white">
-              <div>
-                <div class="card__colleagueInfoContainer">
-                  <div class="card__avatarContainer">
-                    <img
-                      src="https://media-exp1.licdn.com/dms/image/C5103AQGKFPN6mdd-Pw/profile-displayphoto-shrink_100_100/0/1584230157380?e=1657756800&v=beta&t=PATHfA94ZqX2v23QSVmTc8R8LFXLpdJLmDJaMLtYTCE"
-                      alt=""
-                    />
-                  </div>
-                  <div class="card__colleagueInfoDetail">
-                    <div class="card__colleagueName">Tim Byeon</div>
-                    <div class="card__colleagueJobtitle">Principal Engineer, Agile Coach at Samsung SDS</div>
-                  </div>
+      </div>
+    </section>
+    <section id="work" class="section" data-idx="3">
+      <h1 class="work__title popupAnimate">Work</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora molestias id soluta eligendi corrupti quaerat quibusdam hic voluptatibus voluptate, repellendus adipisci veritatis, ratione
+        itaque at provident eveniet harum explicabo illum repudiandae? Ex velit doloremque saepe cupiditate deserunt eius quo beatae placeat iusto neque, facere, itaque necessitatibus cumque amet
+        ipsam architecto animi accusamus voluptates tempora odit et reprehenderit ad? Magnam temporibus pariatur veritatis itaque ex modi cum iure sit, at ipsam nemo quasi, ratione laborum impedit
+        illo recusandae ipsa officiis fugit explicabo doloribus veniam. Laboriosam corrupti officiis ut reiciendis, rerum at sed, obcaecati omnis quidem amet consequuntur repudiandae ex non,
+        recusandae voluptas quos quis nostrum nisi enim aliquam. Corrupti minima, accusamus est dolore illo excepturi dolor natus illum aspernatur vitae obcaecati sint culpa officia accusantium. Fuga
+        laudantium odit autem labore, cupiditate assumenda adipisci repellendus harum? Perspiciatis labore eligendi eos at repudiandae, delectus officia qui iure natus soluta nobis nisi tempora
+        obcaecati ipsum ex quia unde voluptate odit rem suscipit numquam voluptates exercitationem quae pariatur? Alias non itaque tempora, officia, voluptatibus error quas dicta et obcaecati sapiente
+        corporis quia, animi asperiores omnis incidunt dolore maxime laudantium expedita sint rem? Aut doloribus, iste odit debitis optio eius exercitationem veniam fugiat in blanditiis sint quasi
+        enim distinctio dolorum recusandae nobis et, asperiores quidem repudiandae harum saepe tenetur molestiae officia dicta. Nisi impedit asperiores ut architecto! Et mollitia id fuga repellendus
+        saepe facere voluptatibus incidunt, sint molestias sequi delectus vel modi nulla magnam nihil deleniti dolorem eligendi rerum explicabo atque illo. Eveniet voluptatem soluta cumque officiis
+        earum. Velit ad exercitationem distinctio rerum earum alias provident aliquid sint ipsa, omnis repudiandae vitae suscipit minima quidem accusamus impedit, quaerat nobis id quam rem nemo
+        maiores quis reiciendis! Dignissimos reprehenderit voluptate impedit incidunt recusandae, fugit nesciunt velit rem alias delectus vero ipsa sequi, in accusamus nisi itaque quasi!
+      </p>
+      <h4>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat dolore, dolor, ratione veniam doloribus porro voluptate explicabo error odio blanditiis magni quod pariatur saepe facere commodi
+        necessitatibus asperiores reprehenderit obcaecati.
+      </h4>
+    </section>
+    <section id="testimonials" class="section" data-idx="4">
+      <h1 class="testimonials__title popupAnimate">Testimonials</h1>
+      <div class="cardContainer">
+        <div class="card__innerContainer">
+          <div class="card__item popupAnimate white">
+            <div>
+              <div class="card__colleagueInfoContainer">
+                <div class="card__avatarContainer">
+                  <img
+                    src="https://media-exp1.licdn.com/dms/image/C5103AQGKFPN6mdd-Pw/profile-displayphoto-shrink_100_100/0/1584230157380?e=1657756800&v=beta&t=PATHfA94ZqX2v23QSVmTc8R8LFXLpdJLmDJaMLtYTCE"
+                    alt=""
+                  />
                 </div>
-                <div class="card__contentsContainer">
-                  <div class="card__contentsTitle">
-                    <h4>Anyone who wants to make a growing team rapidly and continuously, with Chris, it is possible to create a self-organizing & self-managing team.</h4>
-                  </div>
-                  <div class="card__contents">
-                    <p>
-                      The past 2 years I worked with Chris(Yongrak) at 'Hackingzone'(bug bounty platform), I had the best time as a product manager.When I met Chris(Yongrak), for the first time, he's
-                      a front-end engineer. At the beginning of the project, our team was a very small team. So he should be a lead developer and he should decide our development architecture. As a
-                      full-stack engineer, he was responsible for all aspects of development. (e.g. back-end development, front-end development, publishing and establishing configuration policy &
-                      build pipeline etc) Basically he has a growth mindset, and he always seeks to find his improvements by actively seeking feedback from his colleagues.Because of his eagerness for
-                      growth, he grows very fast. As a development leader, he motivates team members with shared understanding of vision and goals. When the tension of the team members came loose, he
-                      showed appropriate stimulation and motivating leadership, leading the Hackingzone team not to deviate from the direction to achieve the success goal. Chris also considers the
-                      business side of our product. In order to penetrate into the Korean bug bounty market, our team had to release our platform as quickly as possible. So he asked a lot of questions
-                      to share the vision/goals of the Hackingzone team, and thankfully gave advanced ideas to move forward. Also when our consensus was formed, as mentioned above, his servant
-                      leadership was shown by acting as a development leader & scrum master to make the team as a self-organizing team. When communicating between the business team and the development
-                      team, he has a capacity of communicating with each side with the excellent metaphor. When the COVID-19 pandemic was affecting our team health, Chris maintained a sustainable pace
-                      by communicating with his team members online continuously. I was very happy to meet be the same team with Chris. I also learned from Chris's attitude for seeking
-                      self-improvements and driving toward success. In the current VUCA environment, we should have business agility because of the survival of the company. Anyone who wants to make a
-                      growing team rapidly and continuously, with Chris, it is possible to create a self-organizing & self-managing team. I'm confident that finding and working with Chris will be a
-                      great opportunity to make your team very healthy and your product wonderfully.
-                    </p>
-                  </div>
+                <div class="card__colleagueInfoDetail">
+                  <div class="card__colleagueName">Tim Byeon</div>
+                  <div class="card__colleagueJobtitle">Principal Engineer, Agile Coach at Samsung SDS</div>
                 </div>
               </div>
-              <div class="card__btnSeeMore">
-                <a target="_blank" href="https://www.linkedin.com/in/yongrak-choi-59820b165/">see more</a>
+              <div class="card__contentsContainer">
+                <div class="card__contentsTitle">
+                  <h4>Anyone who wants to make a growing team rapidly and continuously, with Chris, it is possible to create a self-organizing & self-managing team.</h4>
+                </div>
+                <div class="card__contents">
+                  <p>
+                    The past 2 years I worked with Chris(Yongrak) at 'Hackingzone'(bug bounty platform), I had the best time as a product manager.When I met Chris(Yongrak), for the first time, he's a
+                    front-end engineer. At the beginning of the project, our team was a very small team. So he should be a lead developer and he should decide our development architecture. As a
+                    full-stack engineer, he was responsible for all aspects of development. (e.g. back-end development, front-end development, publishing and establishing configuration policy & build
+                    pipeline etc) Basically he has a growth mindset, and he always seeks to find his improvements by actively seeking feedback from his colleagues.Because of his eagerness for growth,
+                    he grows very fast. As a development leader, he motivates team members with shared understanding of vision and goals. When the tension of the team members came loose, he showed
+                    appropriate stimulation and motivating leadership, leading the Hackingzone team not to deviate from the direction to achieve the success goal. Chris also considers the business
+                    side of our product. In order to penetrate into the Korean bug bounty market, our team had to release our platform as quickly as possible. So he asked a lot of questions to share
+                    the vision/goals of the Hackingzone team, and thankfully gave advanced ideas to move forward. Also when our consensus was formed, as mentioned above, his servant leadership was
+                    shown by acting as a development leader & scrum master to make the team as a self-organizing team. When communicating between the business team and the development team, he has a
+                    capacity of communicating with each side with the excellent metaphor. When the COVID-19 pandemic was affecting our team health, Chris maintained a sustainable pace by communicating
+                    with his team members online continuously. I was very happy to meet be the same team with Chris. I also learned from Chris's attitude for seeking self-improvements and driving
+                    toward success. In the current VUCA environment, we should have business agility because of the survival of the company. Anyone who wants to make a growing team rapidly and
+                    continuously, with Chris, it is possible to create a self-organizing & self-managing team. I'm confident that finding and working with Chris will be a great opportunity to make
+                    your team very healthy and your product wonderfully.
+                  </p>
+                </div>
               </div>
             </div>
-            <div class="card__item popupAnimate">
-              <div>
-                <div class="card__colleagueInfoContainer">
-                  <div class="card__avatarContainer">
-                    <img
-                      src="https://media-exp1.licdn.com/dms/image/C4D03AQGPXlcV8wpL1w/profile-displayphoto-shrink_400_400/0/1581979653675?e=1658361600&v=beta&t=GtMUnDwiq6eXzyX-lsvjROOQDg458xgFX5a49IxAdx4"
-                      alt=""
-                    />
-                  </div>
-                  <div class="card__colleagueInfoDetail">
-                    <div class="card__colleagueName">Hajeong Noh</div>
-                    <div class="card__colleagueJobtitle">Manager Retail Anlaytics at Adidas</div>
-                  </div>
+            <div class="card__btnSeeMore">
+              <a target="_blank" href="https://www.linkedin.com/in/yongrak-choi-59820b165/">see more</a>
+            </div>
+          </div>
+          <div class="card__item popupAnimate">
+            <div>
+              <div class="card__colleagueInfoContainer">
+                <div class="card__avatarContainer">
+                  <img
+                    src="https://media-exp1.licdn.com/dms/image/C4D03AQGPXlcV8wpL1w/profile-displayphoto-shrink_400_400/0/1581979653675?e=1658361600&v=beta&t=GtMUnDwiq6eXzyX-lsvjROOQDg458xgFX5a49IxAdx4"
+                    alt=""
+                  />
                 </div>
-                <div class="card__contentsContainer">
-                  <div class="card__contentsTitle">
-                    <h4>Anyone who wants to make a growing team rapidly and continuously, with Chris</h4>
-                  </div>
-                  <div class="card__contents">
-                    <p>
-                      The past 2 years I worked with Chris(Yongrak) at 'Hackingzone'(bug bounty platform), I had the best time as a product manager.When I met Chris(Yongrak), for the first time, he's
-                      a front-end engineer. At the beginning of the project, our team was a very small team. So he should be a lead developer and he should decide our development architecture. As a
-                      full-stack engineer, he was responsible for all aspects of development. (e.g. back-end development, front-end development, publishing and establishing configuration policy &
-                      build pipeline etc) Basically he has a growth mindset, and he always seeks to find his improvements by actively seeking feedback from his colleagues.Because of his eagerness for
-                      growth, he grows very fast. As a development leader, he motivates team members with shared understanding of vision and goals. When the tension of the team members came loose, he
-                      showed appropriate stimulation and motivating leadership, leading the Hackingzone team not to deviate from the direction to achieve the success goal. Chris also considers the
-                      business side of our product. In order to penetrate into the Korean bug bounty market, our team had to release our platform as quickly as possible. So he asked a lot of questions
-                      to share the vision/goals of the Hackingzone team, and thankfully gave advanced ideas to move forward. Also when our consensus was formed, as mentioned above, his servant
-                      leadership was shown by acting as a development leader & scrum master to make the team as a self-organizing team. When communicating between the business team and the development
-                      team, he has a capacity of communicating with each side with the excellent metaphor. When the COVID-19 pandemic was affecting our team health, Chris maintained a sustainable pace
-                      by communicating with his team members online continuously. I was very happy to meet be the same team with Chris. I also learned from Chris's attitude for seeking
-                      self-improvements and driving toward success. In the current VUCA environment, we should have business agility because of the survival of the company. Anyone who wants to make a
-                      growing team rapidly and continuously, with Chris, it is possible to create a self-organizing & self-managing team. I'm confident that finding and working with Chris will be a
-                      great opportunity to make your team very healthy and your product wonderfully.
-                    </p>
-                  </div>
+                <div class="card__colleagueInfoDetail">
+                  <div class="card__colleagueName">Hajeong Noh</div>
+                  <div class="card__colleagueJobtitle">Manager Retail Anlaytics at Adidas</div>
                 </div>
               </div>
-              <div class="card__btnSeeMore">
-                <a target="_blank" href="https://www.linkedin.com/in/yongrak-choi-59820b165/">see more</a>
+              <div class="card__contentsContainer">
+                <div class="card__contentsTitle">
+                  <h4>Anyone who wants to make a growing team rapidly and continuously, with Chris</h4>
+                </div>
+                <div class="card__contents">
+                  <p>
+                    The past 2 years I worked with Chris(Yongrak) at 'Hackingzone'(bug bounty platform), I had the best time as a product manager.When I met Chris(Yongrak), for the first time, he's a
+                    front-end engineer. At the beginning of the project, our team was a very small team. So he should be a lead developer and he should decide our development architecture. As a
+                    full-stack engineer, he was responsible for all aspects of development. (e.g. back-end development, front-end development, publishing and establishing configuration policy & build
+                    pipeline etc) Basically he has a growth mindset, and he always seeks to find his improvements by actively seeking feedback from his colleagues.Because of his eagerness for growth,
+                    he grows very fast. As a development leader, he motivates team members with shared understanding of vision and goals. When the tension of the team members came loose, he showed
+                    appropriate stimulation and motivating leadership, leading the Hackingzone team not to deviate from the direction to achieve the success goal. Chris also considers the business
+                    side of our product. In order to penetrate into the Korean bug bounty market, our team had to release our platform as quickly as possible. So he asked a lot of questions to share
+                    the vision/goals of the Hackingzone team, and thankfully gave advanced ideas to move forward. Also when our consensus was formed, as mentioned above, his servant leadership was
+                    shown by acting as a development leader & scrum master to make the team as a self-organizing team. When communicating between the business team and the development team, he has a
+                    capacity of communicating with each side with the excellent metaphor. When the COVID-19 pandemic was affecting our team health, Chris maintained a sustainable pace by communicating
+                    with his team members online continuously. I was very happy to meet be the same team with Chris. I also learned from Chris's attitude for seeking self-improvements and driving
+                    toward success. In the current VUCA environment, we should have business agility because of the survival of the company. Anyone who wants to make a growing team rapidly and
+                    continuously, with Chris, it is possible to create a self-organizing & self-managing team. I'm confident that finding and working with Chris will be a great opportunity to make
+                    your team very healthy and your product wonderfully.
+                  </p>
+                </div>
               </div>
             </div>
-            <div class="card__item popupAnimate">
-              <div>
-                <div class="card__colleagueInfoContainer">
-                  <div class="card__avatarContainer">
-                    <img
-                      src="https://media-exp1.licdn.com/dms/image/C5103AQEccj0T088c3w/profile-displayphoto-shrink_400_400/0/1546093169351?e=1658361600&v=beta&t=sbzuRjUeZGUEiE1RBqsvOma3T3Ru7O253QSx34U7ZWQ"
-                      alt=""
-                    />
-                  </div>
-                  <div class="card__colleagueInfoDetail">
-                    <div class="card__colleagueName">Bongkeun Shin</div>
-                    <div class="card__colleagueJobtitle">Full Stack Developer, Engineer at Samsung SDS</div>
-                  </div>
+            <div class="card__btnSeeMore">
+              <a target="_blank" href="https://www.linkedin.com/in/yongrak-choi-59820b165/">see more</a>
+            </div>
+          </div>
+          <div class="card__item popupAnimate">
+            <div>
+              <div class="card__colleagueInfoContainer">
+                <div class="card__avatarContainer">
+                  <img
+                    src="https://media-exp1.licdn.com/dms/image/C5103AQEccj0T088c3w/profile-displayphoto-shrink_400_400/0/1546093169351?e=1658361600&v=beta&t=sbzuRjUeZGUEiE1RBqsvOma3T3Ru7O253QSx34U7ZWQ"
+                    alt=""
+                  />
                 </div>
-                <div class="card__contentsContainer">
-                  <div class="card__contentsTitle">
-                    <h4>I am sure that wherever he work and whoever he work with, he will contribute to that organization and grow together</h4>
-                  </div>
-                  <div class="card__contents">
-                    <p>
-                      If only a few words were allowed to introduce Yongrak I would say, He is the Engineer who solves problems. Yongrak and I have worked together since the beginning of the brand new
-                      in-house venture project team, Hackingzone, which recently have been approved for spin-off and seed funding by Samsung SDS. Though Yongrak and I decided to pursue another career
-                      path other than Hackingzone, 2 years that I had spent with him was just enough time to know that he is a problem solver and he always dedicate himself to deal with the issues. We
-                      needed to set up web portal for hackers and enterprise users from the very bottom and nothing was given to us. And that was the point he proved his existence: he decided which
-                      cloud, database, languages for front-end and bak-end to use and how to manage github branches, code conventions of the project, CI/CD, image/file server, data encryption and test
-                      environment. There were hundreds of tasks to be done for the successful initiation of the new business and he had done it step by step with sincerity and enthusiasm. It was great
-                      journey for me that I could have worked with Yongrak because not only he has remarkable skills to solve problem, but he is also a great motivator by showing that any challenges
-                      and issues can be resolved. Additionally he always come to people and say hi first and that is another reason that I have enjoyed working together with him. I am sure that
-                      wherever he work and whoever he work with, he will contribute to that organization and grow together. I also am willing to work with him again anywhere, anytime in the future.
-                    </p>
-                  </div>
+                <div class="card__colleagueInfoDetail">
+                  <div class="card__colleagueName">Bongkeun Shin</div>
+                  <div class="card__colleagueJobtitle">Full Stack Developer, Engineer at Samsung SDS</div>
                 </div>
               </div>
-              <div class="card__btnSeeMore">
-                <a target="_blank" href="https://www.linkedin.com/in/yongrak-choi-59820b165/">see more</a>
+              <div class="card__contentsContainer">
+                <div class="card__contentsTitle">
+                  <h4>I am sure that wherever he work and whoever he work with, he will contribute to that organization and grow together</h4>
+                </div>
+                <div class="card__contents">
+                  <p>
+                    If only a few words were allowed to introduce Yongrak I would say, He is the Engineer who solves problems. Yongrak and I have worked together since the beginning of the brand new
+                    in-house venture project team, Hackingzone, which recently have been approved for spin-off and seed funding by Samsung SDS. Though Yongrak and I decided to pursue another career
+                    path other than Hackingzone, 2 years that I had spent with him was just enough time to know that he is a problem solver and he always dedicate himself to deal with the issues. We
+                    needed to set up web portal for hackers and enterprise users from the very bottom and nothing was given to us. And that was the point he proved his existence: he decided which
+                    cloud, database, languages for front-end and bak-end to use and how to manage github branches, code conventions of the project, CI/CD, image/file server, data encryption and test
+                    environment. There were hundreds of tasks to be done for the successful initiation of the new business and he had done it step by step with sincerity and enthusiasm. It was great
+                    journey for me that I could have worked with Yongrak because not only he has remarkable skills to solve problem, but he is also a great motivator by showing that any challenges and
+                    issues can be resolved. Additionally he always come to people and say hi first and that is another reason that I have enjoyed working together with him. I am sure that wherever he
+                    work and whoever he work with, he will contribute to that organization and grow together. I also am willing to work with him again anywhere, anytime in the future.
+                  </p>
+                </div>
               </div>
             </div>
-            <div class="card__item popupAnimate">
-              <div>
-                <div class="card__colleagueInfoContainer">
-                  <div class="card__avatarContainer">
-                    <img
-                      src="https://media-exp1.licdn.com/dms/image/C4E03AQGUO9WuVrqklg/profile-displayphoto-shrink_400_400/0/1516938866778?e=1658361600&v=beta&t=ulbvd-ZO67gyTiaGbDBJuYJ2YpJNX_bJ4AN0GI4_zYE"
-                      alt=""
-                    />
-                  </div>
-                  <div class="card__colleagueInfoDetail">
-                    <div class="card__colleagueName">Youngjun Kwon</div>
-                    <div class="card__colleagueJobtitle">SAP IT Engineer at Samsung SDS</div>
-                  </div>
+            <div class="card__btnSeeMore">
+              <a target="_blank" href="https://www.linkedin.com/in/yongrak-choi-59820b165/">see more</a>
+            </div>
+          </div>
+          <div class="card__item popupAnimate">
+            <div>
+              <div class="card__colleagueInfoContainer">
+                <div class="card__avatarContainer">
+                  <img
+                    src="https://media-exp1.licdn.com/dms/image/C4E03AQGUO9WuVrqklg/profile-displayphoto-shrink_400_400/0/1516938866778?e=1658361600&v=beta&t=ulbvd-ZO67gyTiaGbDBJuYJ2YpJNX_bJ4AN0GI4_zYE"
+                    alt=""
+                  />
                 </div>
-                <div class="card__contentsContainer">
-                  <div class="card__contentsTitle">
-                    <h4>He is a self-starter and analyse the problem well and comes up with a holistic solution.</h4>
-                  </div>
-                  <div class="card__contents">
-                    <p>
-                      For the five years I worked with him, he was my mentor and he was always an inspiration to me. Yongrak is one of the most brilliant engineers I have worked with. I had the
-                      pleasure of working with him for 5 years at Samsung where he has easily become one of the most dependable engineers in the team. His passion towards learning new things and
-                      taking up more work inspires the team to go above and beyond. Needless to say, Yongrak is that right combination of enthusiasm and detailed. He is a self-starter and analyse the
-                      problem well and comes up with a holistic solution. I really enjoy his way of work process around building longterm sustainable and scalable solutions. He is someone whom we can
-                      rely on getting the job done and more. He brings his best to the work and makes it a good place to work. His passion towards new technologies and trends is very inspiring. He is
-                      always willing to share his learnings and makes the work a very collaborative experience.
-                    </p>
-                  </div>
+                <div class="card__colleagueInfoDetail">
+                  <div class="card__colleagueName">Youngjun Kwon</div>
+                  <div class="card__colleagueJobtitle">SAP IT Engineer at Samsung SDS</div>
                 </div>
               </div>
-              <div class="card__btnSeeMore">
-                <a target="_blank" href="https://www.linkedin.com/in/yongrak-choi-59820b165/">see more</a>
+              <div class="card__contentsContainer">
+                <div class="card__contentsTitle">
+                  <h4>He is a self-starter and analyse the problem well and comes up with a holistic solution.</h4>
+                </div>
+                <div class="card__contents">
+                  <p>
+                    For the five years I worked with him, he was my mentor and he was always an inspiration to me. Yongrak is one of the most brilliant engineers I have worked with. I had the pleasure
+                    of working with him for 5 years at Samsung where he has easily become one of the most dependable engineers in the team. His passion towards learning new things and taking up more
+                    work inspires the team to go above and beyond. Needless to say, Yongrak is that right combination of enthusiasm and detailed. He is a self-starter and analyse the problem well and
+                    comes up with a holistic solution. I really enjoy his way of work process around building longterm sustainable and scalable solutions. He is someone whom we can rely on getting the
+                    job done and more. He brings his best to the work and makes it a good place to work. His passion towards new technologies and trends is very inspiring. He is always willing to
+                    share his learnings and makes the work a very collaborative experience.
+                  </p>
+                </div>
               </div>
             </div>
-            <div class="card__item popupAnimate">
-              <div>
-                <div class="card__colleagueInfoContainer">
-                  <div class="card__avatarContainer">
-                    <img
-                      src="https://media-exp1.licdn.com/dms/image/C4E03AQHpC1vzL2qvPA/profile-displayphoto-shrink_400_400/0/1517534857916?e=1658361600&v=beta&t=W5He214esnFNzn6Lv84RQaGJJN_eTxwipb5BF5NF_UY"
-                      alt=""
-                    />
-                  </div>
-                  <div class="card__colleagueInfoDetail">
-                    <div class="card__colleagueName">Jinyong Hong</div>
-                    <div class="card__colleagueJobtitle">SAP IT Principal Engineer at Samsung SDS</div>
-                  </div>
+            <div class="card__btnSeeMore">
+              <a target="_blank" href="https://www.linkedin.com/in/yongrak-choi-59820b165/">see more</a>
+            </div>
+          </div>
+          <div class="card__item popupAnimate">
+            <div>
+              <div class="card__colleagueInfoContainer">
+                <div class="card__avatarContainer">
+                  <img
+                    src="https://media-exp1.licdn.com/dms/image/C4E03AQHpC1vzL2qvPA/profile-displayphoto-shrink_400_400/0/1517534857916?e=1658361600&v=beta&t=W5He214esnFNzn6Lv84RQaGJJN_eTxwipb5BF5NF_UY"
+                    alt=""
+                  />
                 </div>
-                <div class="card__contentsContainer">
-                  <div class="card__contentsTitle">
-                    <h4>I can say with confidence that Mr. Choi will be a valuable asset to your team.</h4>
-                  </div>
-                  <div class="card__contents">
-                    <p>
-                      It is my great pleasure to recommend Mr. Yongrak Choi to you. I had worked with Mr. Choi for 6 years (2014~2019) in Samsung SDS. During this period, we mainly operated the SAP
-                      Enterprise Portal system of Samsung Electronics. Choi successfully carried out many projects to streamline the system while operating the system. He was always interested in the
-                      latest technology and development methodologies and made a lot of efforts to apply them to actual work. Mr. Choi also volunteered to help other colleagues. I very much appreciate
-                      his proactive and altruistic attitude. Due to the characteristics described above, I can say with confidence that Mr. Choi will be a valuable asset to your team. If you have any
-                      further questions, please feel free to contact me at hongjinyong@samsung.com
-                    </p>
-                  </div>
+                <div class="card__colleagueInfoDetail">
+                  <div class="card__colleagueName">Jinyong Hong</div>
+                  <div class="card__colleagueJobtitle">SAP IT Principal Engineer at Samsung SDS</div>
                 </div>
               </div>
-              <div class="card__btnSeeMore">
-                <a target="_blank" href="https://www.linkedin.com/in/yongrak-choi-59820b165/">see more</a>
+              <div class="card__contentsContainer">
+                <div class="card__contentsTitle">
+                  <h4>I can say with confidence that Mr. Choi will be a valuable asset to your team.</h4>
+                </div>
+                <div class="card__contents">
+                  <p>
+                    It is my great pleasure to recommend Mr. Yongrak Choi to you. I had worked with Mr. Choi for 6 years (2014~2019) in Samsung SDS. During this period, we mainly operated the SAP
+                    Enterprise Portal system of Samsung Electronics. Choi successfully carried out many projects to streamline the system while operating the system. He was always interested in the
+                    latest technology and development methodologies and made a lot of efforts to apply them to actual work. Mr. Choi also volunteered to help other colleagues. I very much appreciate
+                    his proactive and altruistic attitude. Due to the characteristics described above, I can say with confidence that Mr. Choi will be a valuable asset to your team. If you have any
+                    further questions, please feel free to contact me at hongjinyong@samsung.com
+                  </p>
+                </div>
               </div>
+            </div>
+            <div class="card__btnSeeMore">
+              <a target="_blank" href="https://www.linkedin.com/in/yongrak-choi-59820b165/">see more</a>
             </div>
           </div>
         </div>
-      </section>
-      <section id="contact" class="section" data-idx="5">
-        <h1 class="contact__title">Let's talk</h1>
-        <p class="contact__description">
-          I’m currently looking for new opportunities, My inbox is open. <br />
-          If you have a question, I’ll try my best to get back to you.
-        </p>
-        <a href="mailto:chrischoi3131@gmail.com"><button class="contact__contactBtn">Say, Hello</button></a>
-        <p class="contact__copyright">
-          &copy;
-          <script>
-            document.write(new Date().getFullYear());
-          </script>
-          Yongrak Choi. All right reserved.
-        </p>
-      </section>
-    </div>
+      </div>
+    </section>
+    <section id="contact" class="section" data-idx="5">
+      <h1 class="contact__title">Let's talk</h1>
+      <p class="contact__description">
+        I’m currently looking for new opportunities, My inbox is open. <br />
+        If you have a question, I’ll try my best to get back to you.
+      </p>
+      <a href="mailto:chrischoi3131@gmail.com"><button class="contact__contactBtn">Say, Hello</button></a>
+      <p class="contact__copyright">
+        &copy;
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        Yongrak Choi. All right reserved.
+      </p>
+    </section>
   </body>
 </html>

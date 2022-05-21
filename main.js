@@ -37,14 +37,12 @@
     }
   }
   window.addEventListener('load', async () => {
-    document.body.classList.remove('before-load');
     initializeScrollPopUpElement();
     initializeScrollFooterText();
     await initializeWidenBackgroundSection();
     setTimeout(() => {
-      document.querySelector('.loading').addEventListener('transitionend', e => {
-        e.currentTarget.style.display = 'none';
-      });
+      document.body.classList.remove('beforeLoad');
+      document.querySelector('.loading').style.display = 'none';
     }, 300);
   });
   window.addEventListener('resize', async () => {
@@ -144,8 +142,8 @@
     observer.observe(experienceContainer);
   }
   /*
-  TODO: Add parameter 'target element width'
-   */
+TODO: Add parameter 'target element width'
+*/
 
   function widenBackgroundSize(element) {
     const top = element.getBoundingClientRect().top;
