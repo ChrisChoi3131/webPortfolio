@@ -3,6 +3,7 @@
 @import url("padding.css");
 @import url("margin.css");
 @import url("transition.css");
+@import url("flexbox.css");
 @import url("./sections/home.css");
 @import url("./sections/aboutme.css");
 @import url("./sections/experience.css");

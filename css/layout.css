@@ -19,12 +19,6 @@
 .width-fit {
   max-width: 100% !important;
 }
-.d-flex {
-  display: flex !important;
-}
-.flex-column {
-  flex-direction: column !important;
-}
 
 .overflow-hidden {
   overflow: hidden !important;
