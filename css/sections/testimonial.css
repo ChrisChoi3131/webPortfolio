@@ -128,12 +128,7 @@
 }
 
 .testimonials__title {
-  background: linear-gradient(-70deg, var(--color-light-purple) 0%, var(--color-pink) 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  box-decoration-break: clone;
-  -webkit-box-decoration-break: clone;
+  color: var(--color-pink);
 }
 @media only screen and (max-width: 1280px) {
   #testimonials .card__innerContainer {
