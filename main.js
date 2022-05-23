@@ -149,7 +149,6 @@ TODO: Add parameter 'target element width'
     const top = element.getBoundingClientRect().top;
     const ratio = (window.innerHeight - top) / (window.innerHeight - navbar.offsetHeight);
     const ratioRadius = 1 - (ratio - 0.6) / 0.4;
-    console.log(top, ratio);
     if (top <= 0) {
       element.style.width = '100vw';
       element.style['border-radius'] = 0;

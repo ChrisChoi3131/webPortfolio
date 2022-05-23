@@ -148,19 +148,19 @@
     overflow: hidden;
   }
   #testimonials .card__item:nth-child(1) p {
-    -webkit-line-clamp: 10;
+    -webkit-line-clamp: 9;
   }
   #testimonials .card__item:nth-child(2) p {
-    -webkit-line-clamp: 10;
+    -webkit-line-clamp: 9;
   }
   #testimonials .card__item:nth-child(3) p {
-    -webkit-line-clamp: 10;
+    -webkit-line-clamp: 9;
   }
   #testimonials .card__item:nth-child(4) p {
-    -webkit-line-clamp: 10;
+    -webkit-line-clamp: 9;
   }
   #testimonials .card__item:nth-child(5) p {
-    -webkit-line-clamp: 10;
+    -webkit-line-clamp: 9;
   }
 }
 @media screen and (max-width: 900px) {

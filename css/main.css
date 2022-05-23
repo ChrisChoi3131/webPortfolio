@@ -41,9 +41,7 @@
   stroke-dashoffset: 0;
   animation: loading-circle-ani 2s infinite;
 }
-.navbar__btnHamburger {
-  /* display: none; */
-}
+
 .navbar__hamburgerMenuContainer {
   display: none;
 }
