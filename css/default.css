@@ -38,6 +38,10 @@ html {
   /* letter-spacing: -0.05em; */
 }
 
+section {
+  max-width: 1280px;
+  margin: 0 auto;
+}
 * {
   box-sizing: border-box;
 }
@@ -127,4 +131,7 @@ p {
   font-size: var(--font-semi-micro);
   font-weight: var(--weight-regular);
   color: var(--color-black);
+}
+
+@media screen and (max-width: 900px) {
 }

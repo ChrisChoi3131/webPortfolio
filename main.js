@@ -19,7 +19,7 @@
   let lastScrollY = 0;
   let isFixedHeader = true;
   function openHamburgerMenu() {
-    document.querySelector('.navbar__btnHamburgerContents').classList.remove('active');
+    document.querySelector('.navbar__lineInbtnHamburger').classList.remove('active');
     hamburgerMenuContainer.classList.add('active');
     hamburgerMenuBlur.classList.add('active');
     document.body.classList.add('blur');
@@ -28,7 +28,7 @@
     }
   }
   function closeHamburgerMenu() {
-    document.querySelector('.navbar__btnHamburgerContents').classList.add('active');
+    document.querySelector('.navbar__lineInbtnHamburger').classList.add('active');
     hamburgerMenuContainer.classList.remove('active');
     hamburgerMenuBlur.classList.remove('active');
     document.body.classList.remove('blur');
@@ -149,6 +149,7 @@ TODO: Add parameter 'target element width'
     const top = element.getBoundingClientRect().top;
     const ratio = (window.innerHeight - top) / (window.innerHeight - navbar.offsetHeight);
     const ratioRadius = 1 - (ratio - 0.6) / 0.4;
+    console.log(top, ratio);
     if (top <= 0) {
       element.style.width = '100vw';
       element.style['border-radius'] = 0;

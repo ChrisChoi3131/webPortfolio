@@ -1,3 +1,4 @@
+@charset 'utf-8';
 @import url("default.css");
 @import url("layout.css");
 @import url("padding.css");
@@ -10,153 +11,6 @@
 @import url("./sections/work.css");
 @import url("./sections/testimonial.css");
 @import url("./sections/contact.css");
-
-@media screen and (max-width: 900px) {
-  #navbar {
-    padding: 0 0;
-  }
-  .hamburgerMenu__btnClose {
-    cursor: pointer;
-    position: fixed;
-    top: 28px;
-    right: 18px;
-    display: flex;
-    align-items: center;
-    width: 25px;
-    height: 25px;
-  }
-  .hamburgerMenu__btnClose > div.active {
-    transform: rotate(45deg);
-    background: linear-gradient(0deg, var(--color-white), var(--color-white)) no-repeat right bottom / 100% 2px;
-    width: 100%;
-    transition: background-size 0.3s linear 0.8s;
-  }
-  .hamburgerMenu__btnClose > div ~ div.active {
-    transform: rotate(135deg);
-    background: linear-gradient(0deg, var(--color-white), var(--color-white)) no-repeat right bottom / 100% 2px;
-    width: 100%;
-    transition: background-size 0.3s linear 0.6s;
-  }
-  .hamburgerMenu__btnClose__item {
-    position: absolute;
-    height: 2px;
-    background: linear-gradient(0deg, var(--color-white), var(--color-white)) no-repeat right bottom / 0 2px;
-    transition: background-size 0.3s;
-  }
-
-  .navbar__hamburgerMenuContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    right: -100vw;
-    bottom: 0;
-    background-color: var(--color-pink);
-    width: min(50%, 400px);
-    height: 100vh;
-    z-index: 11;
-    transform: translateX(50vw);
-
-    transition: transform 0.7s;
-    -webkit-transition: transform 0.7s;
-  }
-  .navbar__hamburgerMenu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    height: 60vh;
-  }
-  .navbar__hamburgerMenu__item > * {
-    color: var(--color-white);
-    cursor: pointer;
-    background: var(--color-pink);
-    transition: all var(--animation-duration) ease-in-out;
-  }
-  .navbar__hamburgerMenu__item > *:hover {
-    color: var(--color-black);
-  }
-  .navbar__hamburgerMenuContainer.active {
-    transform: translateX(-100vw);
-    transition: transform 0.7s;
-    -webkit-transition: transform 0.7s;
-  }
-  .navbar__hamburgerMenuBlur.active {
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    transition: var(--animation-duration-medium);
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 10;
-  }
-  .navbar__menu {
-    transform: translateX(600px);
-    opacity: 0;
-    transition: var(--animation-duration-long);
-  }
-  .navbar__btnHamburger {
-    display: inline-block;
-    position: absolute;
-    opacity: 1;
-    padding: 0 0 0 10px;
-    height: 40px;
-    width: 40px;
-    top: 18px;
-    right: 10px;
-  }
-  .navbar__btnHamburgerContents {
-    position: absolute;
-    opacity: 1;
-    height: 2px;
-    width: 25px;
-    top: 50%;
-    background: linear-gradient(0deg, var(--color-pink), var(--color-pink)) no-repeat right bottom / 0 2px;
-    transition-delay: 1s;
-  }
-
-  .navbar__btnHamburgerContents:before {
-    position: absolute;
-    opacity: 1;
-    right: 0px;
-    height: 2px;
-    top: -8px;
-    width: 120%;
-    content: "";
-    background: linear-gradient(0deg, var(--color-pink), var(--color-pink)) no-repeat right bottom / 0 2px;
-    transition-delay: 1s;
-  }
-  .navbar__btnHamburgerContents:after {
-    position: absolute;
-    width: 80%;
-    top: 8px;
-    opacity: 1;
-    right: 0px;
-    height: 2px;
-    content: "";
-    background: linear-gradient(0deg, var(--color-pink), var(--color-pink)) no-repeat right bottom / 0 2px;
-    transition-delay: 1s;
-  }
-  .navbar__btnHamburgerContents.active:before {
-    background: linear-gradient(0deg, var(--color-pink), var(--color-pink)) no-repeat right bottom / 100% 2px;
-    transition: background-size 0.7s ease 0.3s;
-  }
-
-  .navbar__btnHamburgerContents.active {
-    background: linear-gradient(0deg, var(--color-pink), var(--color-pink)) no-repeat right bottom / 100% 2px;
-    transition: background-size 0.7s ease 0.5s;
-  }
-
-  .navbar__btnHamburgerContents.active:after {
-    background: linear-gradient(0deg, var(--color-pink), var(--color-pink)) no-repeat right bottom / 100% 2px;
-    transition: background-size 0.7s ease 0.7s;
-  }
-}
 
 .beforeLoad .loading {
   opacity: 1;
@@ -187,17 +41,11 @@
   stroke-dashoffset: 0;
   animation: loading-circle-ani 2s infinite;
 }
-
+.navbar__btnHamburger {
+  /* display: none; */
+}
 .navbar__hamburgerMenuContainer {
   display: none;
-}
-
-.section {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin: auto;
-  max-width: 1280px;
 }
 
 .tooltip:hover .tooltiptext {
@@ -321,16 +169,12 @@ input:checked + .slider:before {
 
 #navbar {
   z-index: 1;
-  position: fixed;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   background-color: rgba(255, 255, 255, 0.8);
   left: 0;
   top: 0;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   color: var(--color-black);
   padding: 0px 8px;
   height: var(--nav-height);
@@ -386,9 +230,9 @@ input:checked + .slider:before {
   background: linear-gradient(0deg, var(--color-pink), var(--color-pink)) no-repeat right bottom / 100% 2px;
 }
 .navbar_Hamburger,
-.navbar__HamburgerContents,
-.navbar__HamburgerContents::after,
-.navbar__HamburgerContents::before {
+.navbar__lineInbtnHamburger,
+.navbar__lineInbtnHamburger::after,
+.navbar__lineInbtnHamburger::before {
   opacity: 0;
 }
 
@@ -417,4 +261,152 @@ input:checked + .slider:before {
   background-size: 100% 2px;
   background-position-x: left;
   color: var(--color-pink);
+}
+
+@media screen and (max-width: 900px) {
+  #navbar {
+    padding: 0 0;
+  }
+
+  .hamburgerMenu__btnClose {
+    cursor: pointer;
+    position: fixed;
+    top: 28px;
+    right: 18px;
+    display: flex;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+  }
+  .hamburgerMenu__btnClose > div.active {
+    transform: rotate(45deg);
+    background: linear-gradient(0deg, var(--color-white), var(--color-white)) no-repeat right bottom / 100% 2px;
+    width: 100%;
+    transition: background-size 0.3s linear 0.8s;
+  }
+  .hamburgerMenu__btnClose > div ~ div.active {
+    transform: rotate(135deg);
+    background: linear-gradient(0deg, var(--color-white), var(--color-white)) no-repeat right bottom / 100% 2px;
+    width: 100%;
+    transition: background-size 0.3s linear 0.6s;
+  }
+  .hamburgerMenu__btnClose__item {
+    position: absolute;
+    height: 2px;
+    background: linear-gradient(0deg, var(--color-white), var(--color-white)) no-repeat right bottom / 0 2px;
+    transition: background-size 0.3s;
+  }
+
+  .navbar__hamburgerMenuContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    right: -100vw;
+    bottom: 0;
+    background-color: var(--color-pink);
+    width: min(50%, 400px);
+    height: 100vh;
+    z-index: 11;
+    transform: translateX(50vw);
+    transition: transform 0.7s;
+    -webkit-transition: transform 0.7s;
+  }
+  .navbar__hamburgerMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 60vh;
+  }
+  .navbar__hamburgerMenu__item > * {
+    color: var(--color-white);
+    cursor: pointer;
+    background: var(--color-pink);
+    transition: all var(--animation-duration) ease-in-out;
+  }
+  .navbar__hamburgerMenu__item > *:hover {
+    color: var(--color-black);
+  }
+  .navbar__hamburgerMenuContainer.active {
+    transform: translateX(-100vw);
+    transition: transform 0.7s;
+    -webkit-transition: transform 0.7s;
+  }
+  .navbar__hamburgerMenuBlur.active {
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    transition: var(--animation-duration-medium);
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+  }
+  .navbar__menu {
+    transform: translateX(50vw);
+    display: none;
+    opacity: 0;
+    transition: opaticy var(--animation-duration-long) ease;
+  }
+  .navbar__btnHamburger {
+    display: inline-block;
+    position: absolute;
+    opacity: 1;
+    padding: 0 0 0 10px;
+    height: 40px;
+    width: 40px;
+    top: 18px;
+    right: 10px;
+  }
+  .navbar__lineInbtnHamburger {
+    position: absolute;
+    opacity: 1;
+    height: 2px;
+    width: 25px;
+    top: 50%;
+    background: linear-gradient(0deg, var(--color-pink), var(--color-pink)) no-repeat right bottom / 0 2px;
+    transition-delay: 1s;
+  }
+
+  .navbar__lineInbtnHamburger:before {
+    position: absolute;
+    opacity: 1;
+    right: 0px;
+    height: 2px;
+    top: -8px;
+    width: 120%;
+    content: "";
+    background: linear-gradient(0deg, var(--color-pink), var(--color-pink)) no-repeat right bottom / 0 2px;
+    transition-delay: 1s;
+  }
+  .navbar__lineInbtnHamburger:after {
+    position: absolute;
+    width: 80%;
+    top: 8px;
+    opacity: 1;
+    right: 0px;
+    height: 2px;
+    content: "";
+    background: linear-gradient(0deg, var(--color-pink), var(--color-pink)) no-repeat right bottom / 0 2px;
+    transition-delay: 1s;
+  }
+  .navbar__lineInbtnHamburger.active:before {
+    background: linear-gradient(0deg, var(--color-pink), var(--color-pink)) no-repeat right bottom / 100% 2px;
+    transition: background-size 0.7s ease 0.3s;
+  }
+
+  .navbar__lineInbtnHamburger.active {
+    background: linear-gradient(0deg, var(--color-pink), var(--color-pink)) no-repeat right bottom / 100% 2px;
+    transition: background-size 0.7s ease 0.5s;
+  }
+
+  .navbar__lineInbtnHamburger.active:after {
+    background: linear-gradient(0deg, var(--color-pink), var(--color-pink)) no-repeat right bottom / 100% 2px;
+    transition: background-size 0.7s ease 0.7s;
+  }
 }

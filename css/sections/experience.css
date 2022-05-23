@@ -1,6 +1,5 @@
-#experience {
-  align-items: center;
-}
+@charset 'utf-8';
+
 #experience h1,
 h2,
 h3,
@@ -27,14 +26,21 @@ p {
 
 #experience .contents {
   position: relative;
-
   align-items: center;
   left: calc(-50vw + 50%);
   width: 100vw;
   height: inherit;
 }
 #experience .content {
-  width: 80vw;
+  min-width: 1280px;
   min-height: 200px;
   text-align: left;
+}
+.border-left {
+  border-left: 2px solid white;
+}
+@media screen and (max-width: 1280px) {
+  #experience .content {
+    min-width: 0;
+  }
 }
