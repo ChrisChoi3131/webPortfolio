@@ -159,6 +159,12 @@ p {
   #experience .left-line::before {
     left: 20px;
   }
+  #experience .right-line {
+    text-align: end;
+  }
+  #experience .right-line::before {
+    right: 20px;
+  }
   #experience .detail {
     width: 100%;
   }
