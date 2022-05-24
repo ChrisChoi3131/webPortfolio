@@ -6,8 +6,13 @@ h3,
 h4,
 p {
   color: var(--color-white);
+  margin: 4px 0px;
 }
 
+#experience h4::before {
+  /* content: "•"; */
+  margin-right: 4px;
+}
 .experience__title {
   background: linear-gradient(-70deg, var(--color-pink) 40%, var(--color-light-purple) 100%);
   background-clip: text;
@@ -29,19 +34,146 @@ p {
   align-items: center;
   left: calc(-50vw + 50%);
   width: 100vw;
-  height: inherit;
 }
 #experience .content {
-  min-width: 1280px;
-  min-height: 200px;
+  position: relative;
+  width: 1280px;
+  min-height: 100px;
+  padding: 0px 40px;
   text-align: left;
 }
-.border-left {
-  border-left: 2px solid white;
+#experience .content.space {
+  height: 100px;
+}
+#experience .detail {
+  width: 50%;
+}
+#experience .left-line::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 105%;
+  width: 2px;
+  background-color: var(--color-light-grey);
+}
+
+#experience .right-line::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 105%;
+  width: 2px;
+  background-color: var(--color-light-grey);
+}
+.spaceNeedle {
+  margin-top: 5%;
+  height: 15%;
+  width: 15%;
+  fill: white;
+}
+#experience .center-line::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 101%;
+  width: 2px;
+  background-color: var(--color-light-grey);
+}
+
+#experience .fc-blue {
+  background: -webkit-linear-gradient(-70deg, #3bf0e4 0%, var(--color-light-purple));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-box-decoration-break: clone;
+}
+#experience .fc-green {
+  background: -webkit-linear-gradient(-70deg, var(--color-green) 20%, var(--color-light-purple));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-box-decoration-break: clone;
+}
+#experience .fc-usa {
+  background: -webkit-linear-gradient(-40deg, #0a3161 30%, var(--color-white) 50%, #b31942 70%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-box-decoration-break: clone;
+}
+
+#experience .tooltip {
+  position: relative;
+  cursor: pointer;
+  color: var(--color-green);
+}
+#experience .tooltip:hover .tooltiptext {
+  opacity: 1;
+  visibility: visible;
+}
+#experience .tooltip .tooltiptext {
+  visibility: hidden;
+  width: 20vw;
+  background-color: var(--color-black);
+  color: #fff;
+  opacity: 0;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 30px;
+  transition: var(--animation-duration-medium);
+  -webkit-transition: var(--animation-duration-medium);
+}
+
+.objSticky {
+  top: 50vh;
+  right: 0;
+}
+.stickyContainer {
+  height: 80%;
+  width: 50%;
+  top: 0;
+}
+.stickyContainer.stickyLeft {
+  left: 0;
+}
+
+.stickyContainer.stickyRight {
+  right: 0;
 }
 @media screen and (max-width: 1280px) {
+  #experience .contents {
+    min-width: 100vw;
+  }
   #experience .content {
     min-width: 0;
+    padding: 0 40px 0 40px;
+    width: 100vw;
+    min-height: 50px;
+  }
+  #experience .left-line::before {
+    left: 20px;
+  }
+  #experience .detail {
+    width: 100%;
+  }
+  #experience .content.space {
+    height: 50px;
+  }
+  #experience .tooltip .tooltiptext {
+    width: 40vw;
+  }
+  .objSticky {
+    top: 80vh;
+    right: 50vw;
+  }
+  .stickyContainer {
+    height: 93%;
     width: 100%;
   }
 }

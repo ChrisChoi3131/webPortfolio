@@ -5,6 +5,7 @@
 @import url("margin.css");
 @import url("transition.css");
 @import url("flexbox.css");
+@import url("color.css");
 @import url("./sections/home.css");
 @import url("./sections/aboutme.css");
 @import url("./sections/experience.css");
@@ -46,12 +47,12 @@
   display: none;
 }
 
-.tooltip:hover .tooltiptext {
+#navbar .tooltip:hover .tooltiptext {
   opacity: 0.7;
   visibility: visible;
 }
 
-.tooltip .tooltiptext {
+#navbar .tooltip .tooltiptext {
   visibility: hidden;
   width: 120px;
   background-color: var(--color-black);

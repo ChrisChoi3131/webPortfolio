@@ -51,18 +51,6 @@
     transform: translateY(-100%);
   }
 }
-.stickyContainer {
-  height: 50%;
-  right: 0;
-  top: 0;
-  z-index: 1;
-}
-.sticky {
-  padding-top: 20vh;
-  padding-right: 20vw;
-  top: 0;
-  right: 0;
-}
 
 .slideToRight {
   transition: all 0.7s ease 0s;

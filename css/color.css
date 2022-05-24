@@ -1,0 +1,11 @@
+.color-fc-pink {
+  color: var(--color-pink);
+}
+
+.color-fc-grey {
+  color: var(--color-grey);
+}
+
+.color-fc-light-grey {
+  color: var(--color-light-grey);
+}
