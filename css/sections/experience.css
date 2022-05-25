@@ -1,6 +1,6 @@
 @charset 'utf-8';
 
-#experience h1,
+.experience__container h1,
 h2,
 h3,
 h4,
@@ -10,16 +10,11 @@ p {
 }
 
 #experience h4::before {
-  /* content: "•"; */
+  content: "-";
   margin-right: 4px;
 }
 .experience__title {
-  background: linear-gradient(-70deg, var(--color-pink) 40%, var(--color-light-purple) 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  box-decoration-break: clone;
-  -webkit-box-decoration-break: clone;
+  color: var(--color-pink) !important;
 }
 .experience__container {
   height: 100%;
@@ -110,6 +105,7 @@ p {
   cursor: pointer;
   color: var(--color-green);
 }
+
 #experience .tooltip:hover .tooltiptext {
   opacity: 1;
   visibility: visible;
@@ -135,16 +131,16 @@ p {
   right: 0;
 }
 .stickyContainer {
-  height: 80%;
   width: 50%;
   top: 0;
 }
 .stickyContainer.stickyLeft {
   left: 0;
+  height: 78%;
 }
-
 .stickyContainer.stickyRight {
   right: 0;
+  height: 80%;
 }
 @media screen and (max-width: 1280px) {
   #experience .contents {
@@ -179,7 +175,15 @@ p {
     right: 50vw;
   }
   .stickyContainer {
-    height: 93%;
+    padding-top: 200px;
     width: 100%;
+  }
+  .stickyContainer.stickyLeft {
+    left: 0;
+    height: 92%;
+  }
+  .stickyContainer.stickyRight {
+    right: 0;
+    height: 92%;
   }
 }
