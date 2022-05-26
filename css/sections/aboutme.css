@@ -2,5 +2,37 @@
   color: var(--color-pink);
 }
 
+.about__descContainer {
+  width: 60%;
+  padding: auto auto;
+}
 .about__description {
+  color: var(--color-grey);
+  font-weight: var(--weight-medium);
+  margin: 8px 0px;
+}
+
+.about__img {
+  border-radius: 20px;
+  height: 80%;
+  width: 80%;
+}
+
+.about__imgContainer {
+  width: 40%;
+}
+
+@media screen and (max-width: 1280px) {
+  .about__descContainer {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .about__container {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20vh;
+  }
+  .about__imgContainer {
+    width: 100%;
+  }
 }
