@@ -1,10 +1,9 @@
 @charset 'utf-8';
 
 .experience__container h1,
-h2,
-h3,
-h4,
-p {
+.experience__container h2,
+.experience__container h4,
+.experience__container p {
   color: var(--color-white);
   margin: 4px 0px;
 }
@@ -73,7 +72,7 @@ p {
   position: absolute;
   top: 0;
   left: 50%;
-  height: 101%;
+  height: 105%;
   width: 2px;
   background-color: var(--color-light-grey);
 }
@@ -130,17 +129,24 @@ p {
   top: 50vh;
   right: 0;
 }
+.img {
+  z-index: 10;
+  height: 91%;
+  width: 91%;
+  border-radius: 10px;
+}
 .stickyContainer {
+  z-index: 1;
   width: 50%;
   top: 0;
 }
 .stickyContainer.stickyLeft {
   left: 0;
-  height: 78%;
+  height: 88%;
 }
 .stickyContainer.stickyRight {
   right: 0;
-  height: 80%;
+  height: 90%;
 }
 @media screen and (max-width: 1280px) {
   #experience .contents {
@@ -154,12 +160,14 @@ p {
   }
   #experience .left-line::before {
     left: 20px;
+    height: 105%;
   }
   #experience .right-line {
     text-align: end;
   }
   #experience .right-line::before {
     right: 20px;
+    height: 105%;
   }
   #experience .detail {
     width: 100%;
@@ -167,15 +175,18 @@ p {
   #experience .content.space {
     height: 50px;
   }
+  #experience .content.space.mobile-height {
+    height: 300px;
+  }
   #experience .tooltip .tooltiptext {
     width: 40vw;
   }
   .objSticky {
-    top: 80vh;
+    top: 60vh;
     right: 50vw;
   }
   .stickyContainer {
-    padding-top: 200px;
+    padding-top: 20vh;
     width: 100%;
   }
   .stickyContainer.stickyLeft {

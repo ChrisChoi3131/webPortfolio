@@ -16,6 +16,17 @@
   const popupAnimateElements = document.querySelectorAll('.popupAnimate');
   const btnContact = document.querySelector('.home__btnContact');
   const experienceContainer = document.querySelector('.experience__container');
+  const lastElementsOfStickyContainer = document.querySelectorAll('.lastElementOfStickyContainer');
+  const scrollImgs = {
+    0: '0.png',
+    1: '1.png',
+    2: '2.png',
+    3: '3.png',
+    4: '4.png',
+    5: '5.png',
+    6: '6.png',
+    7: '7.png',
+  };
   let lastScrollY = 0;
   let isFixedHeader = true;
   function openHamburgerMenu() {
@@ -126,14 +137,15 @@
       resolve();
     });
   }
-  function callbackWidenBackgroundSection() {
+  function callbackExperienceSection() {
     widenBackgroundSize(experienceContainer);
+    changeImgsByScroll();
   }
   {
     const callbackObserver = entries => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) window.addEventListener('scroll', callbackWidenBackgroundSection);
-        else window.removeEventListener('scroll', callbackWidenBackgroundSection);
+        if (entry.isIntersecting) window.addEventListener('scroll', callbackExperienceSection);
+        else window.removeEventListener('scroll', callbackExperienceSection);
       });
     };
     const observer = new IntersectionObserver(callbackObserver, {
@@ -144,7 +156,10 @@
   /*
 TODO: Add parameter 'target element width'
 */
-
+  function changeImgsByScroll() {
+    console.log(1, lastElementsOfStickyContainer[0].getBoundingClientRect().top);
+    console.log(2, lastElementsOfStickyContainer[1].getBoundingClientRect().top);
+  }
   function widenBackgroundSize(element) {
     const top = element.getBoundingClientRect().top;
     const ratio = (window.innerHeight - top) / (window.innerHeight - navbar.offsetHeight);
