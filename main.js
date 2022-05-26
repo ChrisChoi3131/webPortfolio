@@ -16,17 +16,8 @@
   const popupAnimateElements = document.querySelectorAll('.popupAnimate');
   const btnContact = document.querySelector('.home__btnContact');
   const experienceContainer = document.querySelector('.experience__container');
-  const lastElementsOfStickyContainer = document.querySelectorAll('.lastElementOfStickyContainer');
-  const scrollImgs = {
-    0: '0.png',
-    1: '1.png',
-    2: '2.png',
-    3: '3.png',
-    4: '4.png',
-    5: '5.png',
-    6: '6.png',
-    7: '7.png',
-  };
+  const details = document.querySelectorAll('.detail');
+
   let lastScrollY = 0;
   let isFixedHeader = true;
   function openHamburgerMenu() {
@@ -139,7 +130,17 @@
   }
   function callbackExperienceSection() {
     widenBackgroundSize(experienceContainer);
-    changeImgsByScroll();
+    changeImageByScroll();
+  }
+  function changeImageByScroll() {
+    const imgFirst = document.querySelector('#imgFirst');
+    const imgSecond = document.querySelector('#imgSecond');
+    for (let i = 0; i < details.length; i++) {
+      const diff1 = Math.abs(imgFirst.getBoundingClientRect().top - details[i].getBoundingClientRect().top);
+      const diff2 = Math.abs(imgSecond.getBoundingClientRect().top - details[i].getBoundingClientRect().top);
+      if (diff1 < 100 && details[i].dataset.idx) imgFirst.src = `imgs/${details[i].dataset.idx}.png`;
+      if (diff2 < 100 && details[i].dataset.idx) imgSecond.src = `imgs/${details[i].dataset.idx}.png`;
+    }
   }
   {
     const callbackObserver = entries => {
@@ -156,10 +157,7 @@
   /*
 TODO: Add parameter 'target element width'
 */
-  function changeImgsByScroll() {
-    console.log(1, lastElementsOfStickyContainer[0].getBoundingClientRect().top);
-    console.log(2, lastElementsOfStickyContainer[1].getBoundingClientRect().top);
-  }
+
   function widenBackgroundSize(element) {
     const top = element.getBoundingClientRect().top;
     const ratio = (window.innerHeight - top) / (window.innerHeight - navbar.offsetHeight);
