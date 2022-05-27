@@ -128,6 +128,7 @@
 }
 
 .testimonials__title {
+  text-align: center;
   color: var(--color-pink);
 }
 @media only screen and (max-width: 1280px) {
