@@ -25,7 +25,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 100;
+  z-index: 999;
   background: white;
   opacity: 0;
   transition: 0.5s;
@@ -167,7 +167,7 @@ input:checked + .slider:before {
 }
 
 #navbar {
-  z-index: 999;
+  z-index: 10;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   background-color: rgba(255, 255, 255, 0.8);
